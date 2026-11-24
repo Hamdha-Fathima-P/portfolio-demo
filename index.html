@@ -1173,6 +1173,9 @@
       max-width: 780px;
       position: relative;
       padding-left: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .timeline-container::before {
@@ -1301,7 +1304,7 @@
     .contact-cards {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .contact-detail-card {
@@ -1393,6 +1396,25 @@
       gap: 1rem;
       font-size: 0.86rem;
       color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-secondary);
+      transition: color 0.25s ease;
+    }
+
+    .footer-link:hover {
+      color: #FFFFFF;
     }
 
     /* Back to Top Button */
@@ -1685,6 +1707,9 @@
             <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="btn-icon-social" aria-label="Connect on LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
+            <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-icon-social" aria-label="View GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
           </div>
         </div>
 
@@ -1721,7 +1746,7 @@
         <div class="about-grid">
           <div class="about-narrative-card reveal">
             <p class="about-text">
-              I am a Computer Science Engineering graduate with an interest in software development, cloud technologies, and DevOps engineering. I enjoy exploring new technologies, building practical projects, and continuously improving my technical skills. Currently, I am learning DevOps Engineering at Zoople Technologies, where I am developing my knowledge of automation, containerization, cloud infrastructure, and deployment practices.
+              I am a Computer Science Engineering graduate with an interest in software development, cloud technologies, and DevOps engineering. I enjoy exploring new technologies, building practical projects, and continuously improving my technical skills. Alongside completing a foundational Cybersecurity course from Techmaghi, I am currently learning DevOps Engineering at Zoople Technologies, where I am developing my knowledge of automation, containerization, cloud infrastructure, and secure deployment practices.
             </p>
 
             <div class="about-pillars">
@@ -1729,6 +1754,7 @@
               <span class="pillar-tag"><i class="fa-solid fa-cloud"></i> Cloud Infrastructure</span>
               <span class="pillar-tag"><i class="fa-solid fa-gears"></i> CI/CD &amp; Automation</span>
               <span class="pillar-tag"><i class="fa-solid fa-cubes"></i> Containerization</span>
+              <span class="pillar-tag"><i class="fa-solid fa-shield-halved"></i> Cybersecurity Fundamentals</span>
             </div>
           </div>
 
@@ -1746,6 +1772,14 @@
               <div>
                 <div class="spec-label">Current Specialization</div>
                 <div class="spec-value">DevOps Engineering at Zoople Technologies</div>
+              </div>
+            </div>
+
+            <div class="spec-card">
+              <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <div class="spec-label">Completed Certification Course</div>
+                <div class="spec-value">Cybersecurity Course &ndash; Techmaghi</div>
               </div>
             </div>
 
@@ -1815,12 +1849,13 @@
               <div class="skill-cat-icon">
                 <i class="fa-solid fa-database"></i>
               </div>
-              <h3 class="skill-cat-title">Database</h3>
+              <h3 class="skill-cat-title">Database &amp; Security Foundations</h3>
             </div>
             <div class="metallic-accent-line" aria-hidden="true"></div>
             <div class="skill-list">
               <span class="skill-chip"><i class="fa-solid fa-table"></i> MySQL</span>
               <span class="skill-chip"><i class="fa-solid fa-server"></i> PostgreSQL</span>
+              <span class="skill-chip"><i class="fa-solid fa-shield-halved"></i> Cybersecurity Fundamentals</span>
             </div>
           </article>
         </div>
@@ -1960,11 +1995,11 @@
             </div>
 
             <div class="project-footer">
-              <a href="#" class="btn-github-placeholder" data-project="Institutional Drone Delivery System">
+              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
                 <i class="fa-brands fa-github"></i>
-                <span>GitHub Repo</span>
+                <span>GitHub Profile</span>
               </a>
-              <span class="repo-status-hint">Placeholder Link</span>
+              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
             </div>
           </article>
 
@@ -1993,11 +2028,11 @@
             </div>
 
             <div class="project-footer">
-              <a href="#" class="btn-github-placeholder" data-project="Text to Sign Language Converter">
+              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
                 <i class="fa-brands fa-github"></i>
-                <span>GitHub Repo</span>
+                <span>GitHub Profile</span>
               </a>
-              <span class="repo-status-hint">Placeholder Link</span>
+              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
             </div>
           </article>
 
@@ -2025,11 +2060,11 @@
             </div>
 
             <div class="project-footer">
-              <a href="#" class="btn-github-placeholder" data-project="Audio Speech to Sign Language Converter">
+              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
                 <i class="fa-brands fa-github"></i>
-                <span>GitHub Repo</span>
+                <span>GitHub Profile</span>
               </a>
-              <span class="repo-status-hint">Placeholder Link</span>
+              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
             </div>
           </article>
         </div>
@@ -2042,8 +2077,8 @@
     <section id="education" class="section-padding section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">05 / Academic Background</span>
-          <h2 class="section-title">Education</h2>
+          <span class="section-eyebrow">05 / Academic Background &amp; Certifications</span>
+          <h2 class="section-title">Education &amp; Certifications</h2>
           <span class="section-title-bar"></span>
         </div>
 
@@ -2058,6 +2093,19 @@
             <div class="timeline-meta">
               <span><i class="fa-solid fa-location-dot"></i> Kerala, India</span>
               <span><i class="fa-solid fa-laptop-code"></i> Computer Science &amp; Engineering</span>
+            </div>
+          </div>
+
+          <div class="timeline-item spotlight-card reveal">
+            <span class="timeline-node-dot" aria-hidden="true"></span>
+            <div class="timeline-year-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Certification Course</span>
+            </div>
+            <h3 class="timeline-degree">Cybersecurity Course</h3>
+            <div class="timeline-meta">
+              <span><i class="fa-solid fa-building-columns"></i> Techmaghi</span>
+              <span><i class="fa-solid fa-lock"></i> Information &amp; Network Security Fundamentals</span>
             </div>
           </div>
         </div>
@@ -2092,7 +2140,11 @@
                 </a>
                 <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="btn-secondary">
                   <i class="fa-brands fa-linkedin-in"></i>
-                  <span>LinkedIn Profile</span>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>
@@ -2115,6 +2167,23 @@
                 </button>
               </div>
 
+              <!-- Phone Card -->
+              <div class="contact-detail-card">
+                <div class="contact-detail-left">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <div class="contact-detail-label">Phone Number</div>
+                    <a href="tel:+919048996414" class="contact-detail-value">+91 9048996414</a>
+                  </div>
+                </div>
+                <button type="button" class="btn-copy-mini" id="copyPhoneBtn" aria-label="Copy Phone Number">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
               <!-- LinkedIn Card -->
               <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
                 <div class="contact-detail-left">
@@ -2124,6 +2193,22 @@
                   <div>
                     <div class="contact-detail-label">LinkedIn</div>
                     <div class="contact-detail-value">linkedin.com/in/hamdhafathimap</div>
+                  </div>
+                </div>
+                <span class="btn-copy-mini">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
+                <div class="contact-detail-left">
+                  <div class="contact-detail-icon">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <div>
+                    <div class="contact-detail-label">GitHub</div>
+                    <div class="contact-detail-value">github.com/Hamdha-Fathima-P</div>
                   </div>
                 </div>
                 <span class="btn-copy-mini">
@@ -2156,7 +2241,11 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>&copy; <span id="currentYear"></span> Hamdha Fathima P. All rights reserved.</div>
-      <div>Computer Science Engineering Graduate &bull; Aspiring DevOps Engineer</div>
+      <div>
+        <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+        <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer">LinkedIn</a> &bull;
+        <a href="tel:+919048996414">+91 9048996414</a>
+      </div>
     </div>
   </footer>
 
@@ -2177,211 +2266,43 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       /* ----------------------------------------------------------------------
-         1. DYNAMIC FOOTER YEAR
+         7. COPY EMAIL & PHONE BUTTONS
          ---------------------------------------------------------------------- */
-      const yearEl = document.getElementById("currentYear");
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
-
-      /* ----------------------------------------------------------------------
-         2. TOAST HELPER (NON-INTRUSIVE NOTIFICATION)
-         ---------------------------------------------------------------------- */
-      const toastEl = document.getElementById("toast");
-      const toastMsgEl = document.getElementById("toastMessage");
-      let toastTimeout = null;
-
-      function showToast(message) {
-        if (!toastEl || !toastMsgEl) return;
-        toastMsgEl.textContent = message;
-        toastEl.classList.add("show");
-        clearTimeout(toastTimeout);
-        toastTimeout = setTimeout(() => {
-          toastEl.classList.remove("show");
-        }, 3200);
-      }
-
-      /* ----------------------------------------------------------------------
-         3. HERO DYNAMIC TYPING EFFECT
-         ---------------------------------------------------------------------- */
-      const typedTextEl = document.getElementById("typedText");
-      const roles = [
-        "Computer Science Graduate",
-        "Aspiring DevOps Engineer",
-        "Technology Enthusiast",
-        "Continuous Learner"
-      ];
-
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function typeLoop() {
-        if (!typedTextEl) return;
-        const currentRole = roles[roleIndex];
-
-        if (!isDeleting) {
-          typedTextEl.textContent = currentRole.substring(0, charIndex + 1);
-          charIndex++;
-
-          if (charIndex === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeLoop, 1800);
-            return;
-          }
-          setTimeout(typeLoop, 68);
-        } else {
-          typedTextEl.textContent = currentRole.substring(0, charIndex - 1);
-          charIndex--;
-
-          if (charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(typeLoop, 380);
-            return;
-          }
-          setTimeout(typeLoop, 38);
+      function copyTextToClipboard(text, successMessage, fallbackMessage) {
+        const tempInput = document.createElement("input");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand("copy");
+          showToast(successMessage);
+        } catch (err) {
+          showToast(fallbackMessage);
         }
-      }
-      setTimeout(typeLoop, 750);
-
-      /* ----------------------------------------------------------------------
-         4. NAVIGATION BAR: MOBILE MENU, SCROLL STYLING & ACTIVE SCROLL SPY
-         ---------------------------------------------------------------------- */
-      const navbar = document.getElementById("navbar");
-      const navToggle = document.getElementById("navToggle");
-      const navToggleIcon = document.getElementById("navToggleIcon");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const allNavLinks = document.querySelectorAll(".nav-link");
-      const sections = document.querySelectorAll("main section[id]");
-      const backToTopBtn = document.getElementById("backToTop");
-
-      // Mobile Hamburger Toggle
-      if (navToggle && mobileMenu && navToggleIcon) {
-        navToggle.addEventListener("click", () => {
-          const isOpen = mobileMenu.classList.toggle("open");
-          navToggle.setAttribute("aria-expanded", String(isOpen));
-          navToggleIcon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-        });
-
-        // Close mobile drawer when any link is clicked
-        mobileMenu.querySelectorAll(".nav-link").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileMenu.classList.remove("open");
-            navToggle.setAttribute("aria-expanded", "false");
-            navToggleIcon.className = "fa-solid fa-bars";
-          });
-        });
+        document.body.removeChild(tempInput);
       }
 
-      // Scroll Spy & Back-to-Top Visibility
-      function handleScroll() {
-        const scrollY = window.scrollY;
-
-        if (navbar) {
-          navbar.classList.toggle("scrolled", scrollY > 30);
-        }
-
-        if (backToTopBtn) {
-          backToTopBtn.classList.toggle("visible", scrollY > 450);
-        }
-
-        let currentSectionId = "home";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 140;
-          const sectionHeight = section.offsetHeight;
-          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            currentSectionId = section.getAttribute("id");
-          }
-        });
-
-        allNavLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${currentSectionId}`) {
-            link.classList.add("active");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      handleScroll();
-
-      if (backToTopBtn) {
-        backToTopBtn.addEventListener("click", () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-
-      /* ----------------------------------------------------------------------
-         5. INTERSECTION OBSERVER FOR SCROLL REVEAL ANIMATIONS
-         ---------------------------------------------------------------------- */
-      const revealElements = document.querySelectorAll(".reveal");
-      const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.12,
-          rootMargin: "0px 0px -40px 0px"
-        }
-      );
-
-      revealElements.forEach((el) => revealObserver.observe(el));
-
-      /* ----------------------------------------------------------------------
-         6. SUBTLE MOUSE-TRACKING METALLIC SPOTLIGHT & DESKTOP CURSOR AURA
-         ---------------------------------------------------------------------- */
-      const cursorAura = document.getElementById("cursorAura");
-      const spotlightCards = document.querySelectorAll(".spotlight-card");
-
-      document.addEventListener("mousemove", (e) => {
-        if (cursorAura) {
-          cursorAura.style.left = `${e.clientX}px`;
-          cursorAura.style.top = `${e.clientY}px`;
-        }
-
-        spotlightCards.forEach((card) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          card.style.setProperty("--mouse-x", `${x}px`);
-          card.style.setProperty("--mouse-y", `${y}px`);
-        });
-      });
-
-      /* ----------------------------------------------------------------------
-         7. COPY EMAIL BUTTON & SAFE GITHUB PLACEHOLDER HANDLERS
-         ---------------------------------------------------------------------- */
       const copyEmailBtn = document.getElementById("copyEmailBtn");
       if (copyEmailBtn) {
         copyEmailBtn.addEventListener("click", () => {
-          const email = "hamdhafathima@gmail.com";
-          const tempInput = document.createElement("input");
-          tempInput.value = email;
-          document.body.appendChild(tempInput);
-          tempInput.select();
-          try {
-            document.execCommand("copy");
-            showToast("Email copied to clipboard: hamdhafathima@gmail.com");
-          } catch (err) {
-            showToast("Email: hamdhafathima@gmail.com");
-          }
-          document.body.removeChild(tempInput);
+          copyTextToClipboard(
+            "hamdhafathima@gmail.com",
+            "Email copied to clipboard: hamdhafathima@gmail.com",
+            "Email: hamdhafathima@gmail.com"
+          );
         });
       }
 
-      document.querySelectorAll(".btn-github-placeholder").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          const projectName = btn.getAttribute("data-project") || "Project";
-          showToast(`${projectName}: GitHub repository link coming soon.`);
+      const copyPhoneBtn = document.getElementById("copyPhoneBtn");
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener("click", () => {
+          copyTextToClipboard(
+            "+91 9048996414",
+            "Phone number copied to clipboard: +91 9048996414",
+            "Phone: +91 9048996414"
+          );
         });
-      });
+      }
 
       /* ----------------------------------------------------------------------
          8. SUBTLE SILVER GEOMETRIC PARTICLE NETWORK (HERO CANVAS)
