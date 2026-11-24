@@ -3,52 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamdha Fathima P | Computer Science Graduate &amp; Aspiring DevOps Engineer</title>
-  <meta name="description" content="Personal portfolio of Hamdha Fathima P — Computer Science Engineering Graduate (2026) and Aspiring DevOps Engineer based in Kerala, India." />
+  <title>Hamdha Fathima P | Computer Science Engineering Graduate & Aspiring DevOps Engineer</title>
+  <meta name="description" content="Official portfolio of Hamdha Fathima P — 2026 Computer Science Engineering Graduate and Aspiring DevOps Engineer based in Kerala, India. Showcasing projects in Drone Delivery, Sign Language Accessibility, Cloud, and DevOps." />
+  <meta name="keywords" content="Hamdha Fathima P, DevOps Engineer, Computer Science Engineering, Portfolio, Kerala, Zoople Technologies, Cyber Security, Techmaghi, AWS, Docker, Kubernetes" />
+  <meta name="author" content="Hamdha Fathima P" />
 
-  <!-- Google Fonts: Inter & JetBrains Mono for technical DevOps accents -->
+  <!-- Google Fonts: Inter & JetBrains Mono for technical accents -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome 6 Free CDN for monochrome metallic icons -->
+  <!-- Font Awesome 6 CDN for crisp technical & UI icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN for responsive layout utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     /* ==========================================================================
-       1. DESIGN TOKENS & STRICT BLACK / CHARCOAL / SILVER PALETTE
+       CUSTOM DESIGN TOKENS & MONOCHROME SILVER-BLACK PALETTE
        ========================================================================== */
     :root {
-      --bg-primary: #080808;       /* Deep Black */
-      --bg-secondary: #141414;     /* Charcoal */
-      --bg-card: #1C1C1C;          /* Dark Grey */
-      --bg-card-hover: #222222;    /* Elevated Dark Grey */
-      --text-primary: #F5F5F5;     /* Soft White */
-      --text-secondary: #BFC3C7;   /* Silver */
-      --text-muted: #8A8F94;       /* Muted Steel Grey */
-      --accent-silver: #C0C0C0;    /* Metallic Silver */
-      --border-subtle: #333333;    /* Subtle Grey */
-      --border-metallic: #4D4F52;  /* Highlighted Metallic Border */
-
-      /* Metallic Silver Gradients */
-      --silver-gradient: linear-gradient(135deg, #FFFFFF 0%, #C0C0C0 48%, #7A7D80 100%);
-      --silver-sheen: linear-gradient(110deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 70%);
-      --card-surface: linear-gradient(160deg, #1E1E1E 0%, #151515 100%);
-
-      /* Typography & Layout */
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --nav-height: 74px;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --transition-smooth: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      --bg-primary: #080808;
+      --bg-secondary: #141414;
+      --bg-card: rgba(20, 20, 20, 0.72);
+      --silver-metallic: #C0C0C0;
+      --silver-light: #E5E5E5;
+      --text-primary: #F5F5F5;
+      --text-secondary: #A0A0A0;
+      --border-silver: rgba(192, 192, 192, 0.18);
+      --border-silver-hover: rgba(229, 229, 229, 0.45);
+      --glow-silver: rgba(192, 192, 192, 0.14);
     }
 
-    /* ==========================================================================
-       2. RESET & BASE STYLES
-       ========================================================================== */
-    *, *::before, *::after {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -58,240 +46,205 @@
       scroll-behavior: smooth;
       background-color: var(--bg-primary);
       color: var(--text-primary);
-      font-family: var(--font-sans);
-      overflow-x: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
       background-color: var(--bg-primary);
       color: var(--text-primary);
-      line-height: 1.65;
       overflow-x: hidden;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    ::selection {
-      background-color: rgba(192, 192, 192, 0.25);
-      color: #FFFFFF;
+    .font-mono-tech {
+      font-family: 'JetBrains Mono', monospace;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    /* Subtle Custom Scrollbar */
+    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--bg-primary);
+      background: #080808;
     }
     ::-webkit-scrollbar-thumb {
-      background: #2C2C2C;
-      border-radius: 999px;
-      border: 2px solid var(--bg-primary);
+      background: linear-gradient(180deg, #4a4a4a, #8a8a8a, #4a4a4a);
+      border-radius: 9999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #555555;
+      background: #C0C0C0;
     }
 
     /* ==========================================================================
-       3. UTILITY & METALLIC TYPOGRAPHY CLASSES
+       METALLIC SILVER GRADIENTS & SHIMMER ANIMATIONS
        ========================================================================== */
-    .container {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .silver-text {
-      background: var(--silver-gradient);
+    .silver-gradient-text {
+      background: linear-gradient(
+        110deg,
+        #9e9e9e 0%,
+        #ffffff 25%,
+        #b8b8b8 50%,
+        #f2f2f2 75%,
+        #9e9e9e 100%
+      );
+      background-size: 220% auto;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: var(--accent-silver);
+      animation: silverShimmer 6s linear infinite;
     }
 
-    .section-padding {
-      padding: 6.5rem 0;
+    @keyframes silverShimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 220% center; }
+    }
+
+    .silver-border-gradient {
       position: relative;
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-silver);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
     }
 
-    .section-alt {
-      background-color: var(--bg-secondary);
-      border-top: 1px solid rgba(51, 51, 51, 0.65);
-      border-bottom: 1px solid rgba(51, 51, 51, 0.65);
+    .silver-border-gradient:hover {
+      border-color: var(--border-silver-hover);
+      box-shadow: 0 14px 36px -10px rgba(0, 0, 0, 0.85),
+                  0 0 22px rgba(192, 192, 192, 0.12);
+      transform: translateY(-4px);
     }
 
-    /* Animated Section Headings */
-    .section-header {
-      margin-bottom: 3.5rem;
-    }
-
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-silver);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 1px;
-      background: var(--silver-gradient);
-      display: inline-block;
-    }
-
-    .section-title {
-      font-size: clamp(1.85rem, 3.6vw, 2.65rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      color: var(--text-primary);
+    /* Primary Metallic Button */
+    .btn-silver-primary {
+      background: linear-gradient(135deg, #f5f5f5 0%, #c0c0c0 50%, #e5e5e5 100%);
+      color: #080808;
+      font-weight: 600;
+      border: 1px solid #ffffff;
+      box-shadow: 0 4px 20px rgba(192, 192, 192, 0.22);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
       position: relative;
-      display: inline-block;
+      overflow: hidden;
     }
 
-    .section-title-bar {
-      display: block;
-      width: 0;
-      height: 2px;
-      margin-top: 0.75rem;
-      background: var(--silver-gradient);
-      border-radius: 2px;
-      transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
-    }
-
-    .reveal.visible .section-title-bar {
-      width: 72px;
-    }
-
-    /* Desktop Subtle Cursor Aura */
-    .cursor-aura {
-      position: fixed;
+    .btn-silver-primary::after {
+      content: '';
+      position: absolute;
       top: 0;
-      left: 0;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(192, 192, 192, 0.055) 0%, rgba(192, 192, 192, 0) 70%);
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      transition: opacity 0.3s ease;
-      display: none;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+      transform: skewX(-22deg);
+      transition: left 0.6s ease;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-      .cursor-aura {
-        display: block;
-      }
+    .btn-silver-primary:hover::after {
+      left: 140%;
+    }
+
+    .btn-silver-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(229, 229, 229, 0.35);
+    }
+
+    /* Secondary Dark Glass Button */
+    .btn-silver-outline {
+      background: rgba(20, 20, 20, 0.8);
+      color: #F5F5F5;
+      border: 1px solid rgba(192, 192, 192, 0.38);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .btn-silver-outline:hover {
+      background: rgba(192, 192, 192, 0.12);
+      border-color: #E5E5E5;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(192, 192, 192, 0.14);
     }
 
     /* ==========================================================================
-       4. STICKY GLASSMORPHISM NAVIGATION BAR
+       PRELOADER ANIMATION
        ========================================================================== */
-    .navbar {
+    #preloader {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--nav-height);
-      z-index: 1000;
-      background: rgba(8, 8, 8, 0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(51, 51, 51, 0.55);
-      transition: var(--transition-smooth);
-    }
-
-    .navbar.scrolled {
-      background: rgba(8, 8, 8, 0.9);
-      border-bottom-color: var(--border-subtle);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
-    }
-
-    .nav-inner {
-      height: 100%;
+      inset: 0;
+      z-index: 9999;
+      background-color: #080808;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
-    }
-
-    .brand-monogram {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(145deg, #252525, #111111);
-      border: 1px solid var(--border-metallic);
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transition: opacity 0.6s ease, visibility 0.6s ease;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.85rem;
-      list-style: none;
+    #preloader.hidden-loader {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
 
+    .loader-ring {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid rgba(192, 192, 192, 0.14);
+      border-top-color: #E5E5E5;
+      border-right-color: #9e9e9e;
+      animation: spinLoader 1s cubic-bezier(0.6, 0.2, 0.4, 0.8) infinite;
+    }
+
+    @keyframes spinLoader {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ==========================================================================
+       SUBTLE ARCHITECTURAL GRID & AMBIENT GLOWS
+       ========================================================================== */
+    .bg-tech-grid {
+      background-image:
+        linear-gradient(to right, rgba(192, 192, 192, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(192, 192, 192, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .silver-orb {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(192, 192, 192, 0.11) 0%, rgba(8, 8, 8, 0) 70%);
+      pointer-events: none;
+      filter: blur(28px);
+    }
+
+    /* ==========================================================================
+       NAVIGATION ACTIVE & HOVER UNDERLINE EFFECTS
+       ========================================================================== */
     .nav-link {
       position: relative;
-      font-size: 0.9rem;
-      font-weight: 500;
       color: var(--text-secondary);
-      padding: 0.4rem 0;
       transition: color 0.25s ease;
     }
 
     .nav-link::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -4px;
       width: 0%;
       height: 2px;
-      background: var(--silver-gradient);
+      background: linear-gradient(90deg, #9e9e9e, #ffffff, #9e9e9e);
       border-radius: 2px;
       transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .nav-link:hover,
     .nav-link.active {
-      color: #FFFFFF;
+      color: #F5F5F5;
     }
 
     .nav-link:hover::after,
@@ -299,1192 +252,12 @@
       width: 100%;
     }
 
-    /* Mobile Hamburger Button */
-    .nav-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      align-items: center;
-      justify-content: center;
-      font-size: 1.15rem;
-      transition: var(--transition-smooth);
-    }
-
-    .nav-toggle:hover {
-      border-color: var(--accent-silver);
-    }
-
-    /* Mobile Drawer */
-    .mobile-menu {
-      position: fixed;
-      top: var(--nav-height);
-      left: 0;
-      width: 100%;
-      background: rgba(12, 12, 12, 0.97);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 1.25rem 1.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      transform: translateY(-120%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .mobile-menu .nav-link {
-      display: block;
-      padding: 0.75rem 1rem;
-      border-radius: var(--radius-sm);
-      font-size: 1rem;
-    }
-
-    .mobile-menu .nav-link:hover,
-    .mobile-menu .nav-link.active {
-      background: rgba(192, 192, 192, 0.08);
-    }
-
-    .mobile-menu .nav-link::after {
-      display: none;
-    }
-
     /* ==========================================================================
-       5. HERO SECTION & PARTICLE NETWORK CANVAS
-       ========================================================================== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: calc(var(--nav-height) + 2.5rem);
-      padding-bottom: 4.5rem;
-      overflow: hidden;
-    }
-
-    #hero-canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    /* Subtle radial metallic ambient vignette */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 15%;
-      right: 8%;
-      width: 440px;
-      height: 440px;
-      background: radial-gradient(circle, rgba(192, 192, 192, 0.07) 0%, rgba(8, 8, 8, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 3.5rem;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .hero-status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.42rem 0.95rem;
-      border-radius: 999px;
-      background: rgba(28, 28, 28, 0.85);
-      border: 1px solid var(--border-subtle);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      transform: translateY(16px);
-      animation: heroFadeUp 0.7s ease forwards 0.1s;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #E5E5E5;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-      animation: pulseSilver 2.2s infinite ease-in-out;
-    }
-
-    .hero-name {
-      font-size: clamp(2.45rem, 5.4vw, 4.15rem);
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      margin-bottom: 0.85rem;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.75s ease forwards 0.22s;
-    }
-
-    .hero-headline {
-      font-size: clamp(1.05rem, 2vw, 1.32rem);
-      font-weight: 500;
-      color: var(--text-primary);
-      margin-bottom: 0.9rem;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.75s ease forwards 0.34s;
-    }
-
-    .hero-typing-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--accent-silver);
-      min-height: 1.8rem;
-      margin-bottom: 1.35rem;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.75s ease forwards 0.44s;
-    }
-
-    .typing-prefix {
-      color: var(--text-muted);
-    }
-
-    .typing-cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.15em;
-      background-color: #FFFFFF;
-      animation: blinkCursor 0.85s step-end infinite;
-    }
-
-    .hero-intro {
-      font-size: 1.02rem;
-      color: var(--text-secondary);
-      max-width: 610px;
-      margin-bottom: 2.15rem;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.75s ease forwards 0.54s;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-      opacity: 0;
-      transform: translateY(18px);
-      animation: heroFadeUp 0.75s ease forwards 0.65s;
-    }
-
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.65rem;
-      border-radius: var(--radius-sm);
-      background: var(--silver-gradient);
-      color: #080808;
-      font-weight: 600;
-      font-size: 0.94rem;
-      letter-spacing: -0.01em;
-      box-shadow: 0 6px 22px rgba(192, 192, 192, 0.16);
-      transition: var(--transition-smooth);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(255, 255, 255, 0.22);
-      filter: brightness(1.05);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.65rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-card);
-      color: var(--text-primary);
-      border: 1px solid var(--border-subtle);
-      font-weight: 500;
-      font-size: 0.94rem;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent-silver);
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-    }
-
-    .btn-icon-social {
-      width: 46px;
-      height: 46px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.15rem;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-icon-social:hover {
-      color: #FFFFFF;
-      border-color: var(--accent-silver);
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 0 16px rgba(192, 192, 192, 0.14);
-    }
-
-    /* Compact Profile Photo Placeholder Card (Right Side - Intentionally Small & Refined) */
-    .hero-profile-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
-      border-radius: var(--radius-lg);
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
-      opacity: 0;
-      transform: translateY(22px);
-      animation: heroFadeUp 0.85s ease forwards 0.5s;
-      width: 230px;
-    }
-
-    .hero-profile-card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(51, 51, 51, 0.2), rgba(192, 192, 192, 0.2));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .avatar-frame {
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      padding: 3px;
-      background: var(--silver-gradient);
-      margin-bottom: 1rem;
-      box-shadow: 0 0 24px rgba(192, 192, 192, 0.15);
-    }
-
-    .avatar-placeholder {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 25%, #262626 0%, #101010 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .avatar-initials {
-      font-family: var(--font-mono);
-      font-size: 1.55rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      background: var(--silver-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .avatar-caption {
-      font-size: 0.65rem;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-top: 0.15rem;
-    }
-
-    .profile-meta-mini {
-      text-align: center;
-    }
-
-    .profile-meta-name {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 0.2rem;
-    }
-
-    .profile-meta-loc {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    /* ==========================================================================
-       6. ABOUT ME SECTION (ASYMMETRIC EDITORIAL + METADATA BENTO)
-       ========================================================================== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.45fr 1fr;
-      gap: 2.5rem;
-      align-items: stretch;
-    }
-
-    .about-narrative-card {
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .about-narrative-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-silver), transparent);
-      opacity: 0.5;
-    }
-
-    .about-text {
-      font-size: 1.08rem;
-      line-height: 1.82;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-    }
-
-    .about-pillars {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-    }
-
-    .pillar-tag {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      padding: 0.42rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-    }
-
-    .about-specs-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-    }
-
-    .spec-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 1.35rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1.1rem;
-      transition: var(--transition-smooth);
-    }
-
-    .spec-card:hover {
-      border-color: var(--border-metallic);
-      transform: translateX(4px);
-      background: var(--bg-card-hover);
-    }
-
-    .spec-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-silver);
-      font-size: 1.05rem;
-      flex-shrink: 0;
-    }
-
-    .spec-label {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
-    }
-
-    .spec-value {
-      font-size: 0.96rem;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    /* ==========================================================================
-       7. SKILLS SECTION (ARCHITECTURAL CATEGORY CARDS - NO FAKE PERCENTAGES)
-       ========================================================================== */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-    }
-
-    .skill-category-card {
-      position: relative;
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      transition: var(--transition-smooth);
-      overflow: hidden;
-    }
-
-    /* Mouse-tracking metallic spotlight layer */
-    .spotlight-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(192, 192, 192, 0.08),
-        transparent 45%
-      );
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      pointer-events: none;
-    }
-
-    .spotlight-card:hover::before {
-      opacity: 1;
-    }
-
-    .skill-category-card:hover {
-      border-color: var(--border-metallic);
-      transform: translateY(-5px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-    }
-
-    .skill-cat-header {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      margin-bottom: 1.35rem;
-    }
-
-    .skill-cat-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(145deg, #252525, #121212);
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      font-size: 1.1rem;
-    }
-
-    .skill-cat-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      line-height: 1.3;
-    }
-
-    /* Subtle animated metallic accent divider (non-percentage decorative pulse bar) */
-    .metallic-accent-line {
-      width: 100%;
-      height: 1px;
-      background: var(--border-subtle);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-
-    .metallic-accent-line::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -40%;
-      width: 40%;
-      height: 100%;
-      background: var(--silver-gradient);
-      animation: scanlineSilver 4s ease-in-out infinite;
-    }
-
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-    }
-
-    .skill-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.58rem 0.92rem;
-      border-radius: var(--radius-sm);
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: var(--transition-smooth);
-    }
-
-    .skill-chip i {
-      color: var(--accent-silver);
-      font-size: 0.92rem;
-      transition: transform 0.25s ease, color 0.25s ease;
-    }
-
-    .skill-chip:hover {
-      border-color: var(--accent-silver);
-      color: #FFFFFF;
-      background: #1D1D1D;
-      transform: translateY(-2px);
-    }
-
-    .skill-chip:hover i {
-      color: #FFFFFF;
-      transform: scale(1.12);
-    }
-
-    /* ==========================================================================
-       8. CURRENTLY EXPLORING SECTION (DEVOPS PIPELINE & TIMELINE)
-       ========================================================================== */
-    .learning-banner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.25rem;
-      padding: 1.75rem 2rem;
-      border-radius: var(--radius-lg);
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      margin-bottom: 2.5rem;
-    }
-
-    .learning-institute {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .institute-badge-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
-      background: #101010;
-      border: 1px solid var(--border-metallic);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      color: #FFFFFF;
-    }
-
-    .institute-title {
-      font-size: 1.22rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .institute-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-
-    .live-learning-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.45rem 1rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-metallic);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: #FFFFFF;
-    }
-
-    .live-pulse-ring {
-      position: relative;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #FFFFFF;
-    }
-
-    .live-pulse-ring::after {
-      content: "";
-      position: absolute;
-      inset: -4px;
-      border-radius: 50%;
-      border: 1px solid var(--accent-silver);
-      animation: rippleRing 1.8s infinite ease-out;
-    }
-
-    /* Pipeline Grid Timeline */
-    .learning-pipeline {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      position: relative;
-    }
-
-    .pipeline-node {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      position: relative;
-      transition: var(--transition-smooth);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .pipeline-node:hover {
-      border-color: var(--accent-silver);
-      transform: translateY(-4px);
-      background: var(--bg-card-hover);
-    }
-
-    .pipeline-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .pipeline-step {
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-    }
-
-    .pipeline-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-silver);
-      font-size: 0.95rem;
-    }
-
-    .pipeline-title {
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .pipeline-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    /* ==========================================================================
-       9. PROJECTS SECTION (SHOWCASE CARDS WITH TECHNICAL VISUALS)
-       ========================================================================== */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.85rem;
-    }
-
-    .project-card {
-      position: relative;
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition-smooth);
-      overflow: hidden;
-    }
-
-    .project-card:hover {
-      border-color: var(--accent-silver);
-      transform: translateY(-6px);
-      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
-    }
-
-    .project-visual-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid rgba(51, 51, 51, 0.7);
-    }
-
-    .project-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(145deg, #242424, #101010);
-      border: 1px solid var(--border-metallic);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      font-size: 1.3rem;
-      transition: var(--transition-smooth);
-    }
-
-    .project-card:hover .project-icon-box {
-      transform: scale(1.06);
-      box-shadow: 0 0 20px rgba(192, 192, 192, 0.16);
-    }
-
-    .project-index {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-    }
-
-    .project-title {
-      font-size: 1.24rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
-      line-height: 1.35;
-    }
-
-    .project-desc {
-      font-size: 0.93rem;
-      color: var(--text-secondary);
-      line-height: 1.68;
-      margin-bottom: 1.5rem;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .project-tag {
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      padding: 0.32rem 0.7rem;
-      border-radius: 6px;
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-    }
-
-    .project-footer {
-      padding-top: 1.15rem;
-      border-top: 1px solid rgba(51, 51, 51, 0.65);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .btn-github-placeholder {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.6rem 1.05rem;
-      border-radius: var(--radius-sm);
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-github-placeholder:hover {
-      border-color: var(--accent-silver);
-      background: #1F1F1F;
-    }
-
-    .repo-status-hint {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       10. EDUCATION SECTION (VERTICAL SILVER TIMELINE)
-       ========================================================================== */
-    .timeline-container {
-      max-width: 780px;
-      position: relative;
-      padding-left: 2.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .timeline-container::before {
-      content: "";
-      position: absolute;
-      left: 7px;
-      top: 8px;
-      bottom: 8px;
-      width: 2px;
-      background: linear-gradient(180deg, #FFFFFF 0%, #7A7D80 70%, rgba(51, 51, 51, 0.2) 100%);
-    }
-
-    .timeline-item {
-      position: relative;
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2rem 2.25rem;
-      transition: var(--transition-smooth);
-    }
-
-    .timeline-item:hover {
-      border-color: var(--border-metallic);
-      transform: translateX(5px);
-    }
-
-    .timeline-node-dot {
-      position: absolute;
-      left: -2.25rem;
-      top: 2.15rem;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--bg-primary);
-      border: 3px solid #FFFFFF;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
-    }
-
-    .timeline-year-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(192, 192, 192, 0.1);
-      border: 1px solid var(--border-metallic);
-      color: #FFFFFF;
-      margin-bottom: 0.9rem;
-    }
-
-    .timeline-degree {
-      font-size: 1.32rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.4rem;
-    }
-
-    .timeline-meta {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    .timeline-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    /* ==========================================================================
-       11. CONTACT SECTION & FOOTER
-       ========================================================================== */
-    .contact-wrapper {
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 3.25rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-wrapper::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--silver-gradient);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2.75rem;
-      align-items: center;
-    }
-
-    .contact-closing {
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
-      font-weight: 700;
-      line-height: 1.28;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .contact-subtext {
-      color: var(--text-secondary);
-      font-size: 0.98rem;
-      margin-bottom: 2rem;
-      max-width: 480px;
-    }
-
-    .contact-cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .contact-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    .contact-detail-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.15rem 1.35rem;
-      border-radius: var(--radius-md);
-      background: #121212;
-      border: 1px solid var(--border-subtle);
-      transition: var(--transition-smooth);
-    }
-
-    .contact-detail-card:hover {
-      border-color: var(--accent-silver);
-      background: #181818;
-    }
-
-    .contact-detail-left {
-      display: flex;
-      align-items: center;
-      gap: 0.95rem;
-      min-width: 0;
-    }
-
-    .contact-detail-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-silver);
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .contact-detail-label {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-    }
-
-    .contact-detail-value {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--text-primary);
-      word-break: break-all;
-    }
-
-    .btn-copy-mini {
-      padding: 0.45rem 0.75rem;
-      border-radius: 6px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      flex-shrink: 0;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-copy-mini:hover {
-      border-color: var(--accent-silver);
-      color: #FFFFFF;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 2.25rem 0;
-      border-top: 1px solid var(--border-subtle);
-      background: var(--bg-primary);
-      text-align: center;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    .footer-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      color: var(--text-secondary);
-      transition: color 0.25s ease;
-    }
-
-    .footer-link:hover {
-      color: #FFFFFF;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
-      position: fixed;
-      right: 1.5rem;
-      bottom: 1.5rem;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-metallic);
-      color: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.65);
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(14px);
-      transition: var(--transition-smooth);
-      z-index: 950;
-    }
-
-    .back-to-top.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    .back-to-top:hover {
-      background: var(--silver-gradient);
-      color: #080808;
-      transform: translateY(-3px);
-    }
-
-    /* Toast Notification (Replaces alert() cleanly) */
-    .toast-notification {
-      position: fixed;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(120%);
-      background: #1C1C1C;
-      border: 1px solid var(--accent-silver);
-      color: #F5F5F5;
-      padding: 0.75rem 1.35rem;
-      border-radius: 10px;
-      font-size: 0.88rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
-      z-index: 1200;
-      opacity: 0;
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
-      max-width: 90vw;
-    }
-
-    .toast-notification.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* ==========================================================================
-       12. SCROLL REVEAL & KEYFRAME ANIMATIONS
+       SCROLL REVEAL ANIMATIONS
        ========================================================================== */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
+      transform: translateY(26px);
       transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
                   transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
     }
@@ -1494,6 +267,19 @@
       transform: translateY(0);
     }
 
+    /* Hero Staggered Entrance */
+    .hero-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .delay-100 { animation-delay: 0.12s; }
+    .delay-200 { animation-delay: 0.24s; }
+    .delay-300 { animation-delay: 0.36s; }
+    .delay-400 { animation-delay: 0.48s; }
+    .delay-500 { animation-delay: 0.6s; }
+
     @keyframes heroFadeUp {
       to {
         opacity: 1;
@@ -1501,885 +287,1458 @@
       }
     }
 
-    @keyframes blinkCursor {
-      50% { opacity: 0; }
+    /* Profile Photo Frame Subtle Hover & Metallic Ring */
+    .profile-frame {
+      position: relative;
+      padding: 4px;
+      border-radius: 1.25rem;
+      background: linear-gradient(135deg, #ffffff 0%, #6e6e6e 45%, #d9d9d9 100%);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 24px rgba(192, 192, 192, 0.16);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
     }
 
-    @keyframes pulseSilver {
-      0%, 100% { transform: scale(1); opacity: 0.85; }
-      50% { transform: scale(1.25); opacity: 1; }
+    .profile-frame:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9), 0 0 32px rgba(229, 229, 229, 0.28);
     }
 
-    @keyframes rippleRing {
-      0% { transform: scale(0.8); opacity: 0.85; }
-      100% { transform: scale(2.1); opacity: 0; }
+    /* Timeline Vertical Silver Line */
+    .timeline-line {
+      background: linear-gradient(180deg, rgba(229,229,229,0.7) 0%, rgba(192,192,192,0.25) 65%, rgba(192,192,192,0.05) 100%);
     }
 
-    @keyframes scanlineSilver {
-      0% { left: -40%; }
-      50% { left: 100%; }
-      100% { left: 100%; }
+    /* Skill Pill Hover */
+    .skill-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(192, 192, 192, 0.16);
+      transition: all 0.25s ease;
+    }
+    .skill-pill:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(229, 229, 229, 0.5);
+      transform: translateX(3px);
     }
 
-    /* ==========================================================================
-       13. RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
-       ========================================================================== */
-    @media (max-width: 992px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .hero-profile-card {
-        flex-direction: row;
-        width: 100%;
-        max-width: 380px;
-        padding: 1.15rem 1.35rem;
-        gap: 1.15rem;
-      }
-
-      .avatar-frame {
-        width: 76px;
-        height: 76px;
-        margin-bottom: 0;
-        flex-shrink: 0;
-      }
-
-      .avatar-initials {
-        font-size: 1.15rem;
-      }
-
-      .avatar-caption {
-        font-size: 0.56rem;
-      }
-
-      .profile-meta-mini {
-        text-align: left;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid,
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .section-padding {
-        padding: 4.75rem 0;
-      }
-
-      .skills-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-wrapper {
-        padding: 2rem 1.5rem;
-      }
-
-      .about-narrative-card {
-        padding: 1.85rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        justify-content: center;
-      }
-
-      .timeline-container {
-        padding-left: 1.75rem;
-      }
-
-      .timeline-node-dot {
-        left: -1.75rem;
-      }
-
-      .timeline-item {
-        padding: 1.5rem;
-      }
+    /* Modal Backdrop */
+    .modal-backdrop {
+      background: rgba(5, 5, 5, 0.84);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
   </style>
 </head>
-<body>
-  <!-- Subtle Desktop Mouse Cursor Aura -->
-  <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+
+<body class="bg-[#080808] text-[#F5F5F5] selection:bg-[#C0C0C0] selection:text-[#080808]">
 
   <!-- ========================================================================
-       STICKY NAVIGATION BAR
+       1. STYLISH LOADING SCREEN (PRELOADER)
        ======================================================================== -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="nav-brand" aria-label="Hamdha Fathima P Home">
-        <span class="brand-monogram">HF</span>
-        <span>Hamdha Fathima P</span>
-      </a>
+  <div id="preloader" role="status" aria-label="Loading portfolio">
+    <div class="relative flex items-center justify-center">
+      <div class="loader-ring"></div>
+      <span class="absolute font-mono-tech text-xs font-semibold tracking-widest text-[#E5E5E5]">HFP</span>
+    </div>
+    <p class="mt-4 font-mono-tech text-xs tracking-[0.25em] uppercase text-[#A0A0A0]">
+      Initializing Portfolio...
+    </p>
+  </div>
 
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#learning" class="nav-link">Learning</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- ========================================================================
+       2. FIXED RESPONSIVE NAVIGATION BAR
+       ======================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center gap-2.5 group focus:outline-none">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#262626] to-[#101010] border border-[#C0C0C0]/40 flex items-center justify-center shadow-inner group-hover:border-[#E5E5E5] transition-colors">
+            <span class="font-mono-tech font-bold text-sm silver-gradient-text">HF</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-sm sm:text-base font-bold tracking-tight text-[#F5F5F5] group-hover:text-white transition-colors">
+              Hamdha Fathima P
+            </span>
+            <span class="text-[10px] font-mono-tech uppercase tracking-widest text-[#A0A0A0] hidden sm:block">
+              CSE &bull; DevOps
+            </span>
+          </div>
+        </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <i class="fa-solid fa-bars" id="navToggleIcon"></i>
-      </button>
+        <!-- Desktop Menu -->
+        <nav aria-label="Primary Navigation" class="hidden lg:flex items-center space-x-7">
+          <a href="#home" class="nav-link active text-sm font-medium">Home</a>
+          <a href="#about" class="nav-link text-sm font-medium">About</a>
+          <a href="#skills" class="nav-link text-sm font-medium">Skills</a>
+          <a href="#education" class="nav-link text-sm font-medium">Education</a>
+          <a href="#projects" class="nav-link text-sm font-medium">Projects</a>
+          <a href="#certifications" class="nav-link text-sm font-medium">Certifications</a>
+          <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+        </nav>
+
+        <!-- Desktop Quick Action & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold btn-silver-outline">
+            <span>Let's Connect</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-[#C0C0C0]"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
+            class="lg:hidden p-2.5 rounded-lg bg-[#141414] border border-[#C0C0C0]/25 text-[#E5E5E5] hover:border-[#E5E5E5] focus:outline-none">
+            <i id="menu-icon" class="fa-solid fa-bars text-base"></i>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- Mobile Dropdown Drawer -->
-    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#learning" class="nav-link">Learning</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0e0e0e]/95 backdrop-blur-xl border-b border-[#C0C0C0]/20">
+      <nav aria-label="Mobile Navigation" class="px-4 pt-3 pb-6 space-y-1.5">
+        <a href="#home" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#F5F5F5] bg-white/5">Home</a>
+        <a href="#about" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">About</a>
+        <a href="#skills" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">Skills</a>
+        <a href="#education" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">Education</a>
+        <a href="#projects" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">Projects</a>
+        <a href="#certifications" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">Certifications</a>
+        <a href="#contact" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] hover:bg-white/5">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <!-- ======================================================================
-         HERO SECTION
+         3. HERO SECTION (WITH PARTICLE CANVAS & ELEGANT PHOTO FRAME)
          ====================================================================== -->
-    <section id="home" class="hero">
-      <!-- Interactive Silver Geometric Particle Canvas -->
-      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-tech-grid">
+      <!-- Interactive Subtle Silver Network Canvas -->
+      <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
 
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-status-pill">
-            <span class="status-dot"></span>
-            <span>Open to DevOps &amp; Software Opportunities &bull; Kerala, India</span>
-          </div>
+      <!-- Ambient Monochrome Glows -->
+      <div class="silver-orb w-80 h-80 -top-16 -left-16"></div>
+      <div class="silver-orb w-96 h-96 bottom-8 right-0"></div>
 
-          <h1 class="hero-name silver-text">Hamdha Fathima P</h1>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 
-          <p class="hero-headline">Computer Science Graduate | Aspiring DevOps Engineer</p>
-
-          <div class="hero-typing-wrapper" aria-live="polite">
-            <span class="typing-prefix">&gt;_</span>
-            <span id="typedText"></span>
-            <span class="typing-cursor" aria-hidden="true"></span>
-          </div>
-
-          <p class="hero-intro">
-            Passionate about modern software engineering, resilient cloud infrastructure, and automated DevOps workflows—bridging clean application development with scalable deployment practices.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">
-              <span>Explore My Work</span>
-              <i class="fa-solid fa-arrow-down-right"></i>
-            </a>
-            <a href="#contact" class="btn-secondary">
-              <span>Contact Me</span>
-              <i class="fa-regular fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="btn-icon-social" aria-label="Connect on LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-icon-social" aria-label="View GitHub Profile">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Compact Profile Photo Placeholder Card -->
-        <aside class="hero-profile-card" aria-label="Profile Summary Card">
-          <div class="avatar-frame">
-            <div class="avatar-placeholder" role="img" aria-label="Profile Photo Placeholder for Hamdha Fathima P">
-              <span class="avatar-initials">HFP</span>
-              <span class="avatar-caption"><i class="fa-solid fa-user-astronaut"></i> Photo</span>
+          <!-- Left Column: Primary Identity & Typography (Focus Area) -->
+          <div class="lg:col-span-8 space-y-6 text-left">
+            <!-- Status Pill -->
+            <div class="hero-animate inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#141414]/90 border border-[#C0C0C0]/25 backdrop-blur-md">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E5E5E5] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#E5E5E5]"></span>
+              </span>
+              <span class="font-mono-tech text-xs text-[#E5E5E5] tracking-wide">
+                Currently Learning DevOps Engineering @ Zoople Technologies
+              </span>
             </div>
-          </div>
-          <div class="profile-meta-mini">
-            <div class="profile-meta-name">Hamdha Fathima P</div>
-            <div class="profile-meta-loc">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Kerala, India</span>
+
+            <!-- Main Name & Title -->
+            <div class="space-y-3">
+              <p class="hero-animate delay-100 font-mono-tech text-sm sm:text-base text-[#A0A0A0] tracking-wider uppercase">
+                Hello, I'm
+              </p>
+              <h1 class="hero-animate delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                <span class="silver-gradient-text">Hamdha Fathima P</span>
+              </h1>
+              <h2 class="hero-animate delay-200 text-lg sm:text-xl md:text-2xl font-medium text-[#E5E5E5] pt-1">
+                Computer Science Engineering Graduate <span class="text-[#C0C0C0] mx-1.5">|</span>
+                <span class="text-[#C0C0C0]">Aspiring DevOps Engineer</span>
+              </h2>
             </div>
-          </div>
-        </aside>
-      </div>
-    </section>
 
-    <!-- ======================================================================
-         ABOUT ME SECTION
-         ====================================================================== -->
-    <section id="about" class="section-padding section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">01 / Profile Overview</span>
-          <h2 class="section-title">About Me</h2>
-          <span class="section-title-bar"></span>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-narrative-card reveal">
-            <p class="about-text">
-              I am a Computer Science Engineering graduate with an interest in software development, cloud technologies, and DevOps engineering. I enjoy exploring new technologies, building practical projects, and continuously improving my technical skills. Alongside completing a foundational Cybersecurity course from Techmaghi, I am currently learning DevOps Engineering at Zoople Technologies, where I am developing my knowledge of automation, containerization, cloud infrastructure, and secure deployment practices.
+            <!-- Concise Introduction -->
+            <p class="hero-animate delay-300 text-base sm:text-lg text-[#A0A0A0] max-w-2xl leading-relaxed">
+              Passionate about bridging software development and resilient infrastructure. I am exploring modern cloud computing, containerization, automation pipelines, and secure system workflows to build reliable, scalable digital solutions.
             </p>
 
-            <div class="about-pillars">
-              <span class="pillar-tag"><i class="fa-solid fa-code"></i> Software Development</span>
-              <span class="pillar-tag"><i class="fa-solid fa-cloud"></i> Cloud Infrastructure</span>
-              <span class="pillar-tag"><i class="fa-solid fa-gears"></i> CI/CD &amp; Automation</span>
-              <span class="pillar-tag"><i class="fa-solid fa-cubes"></i> Containerization</span>
-              <span class="pillar-tag"><i class="fa-solid fa-shield-halved"></i> Cybersecurity Fundamentals</span>
+            <!-- Primary & Secondary Interactive Buttons -->
+            <div class="hero-animate delay-400 flex flex-wrap items-center gap-4 pt-2">
+              <a href="#projects" class="btn-silver-primary px-6 py-3.5 rounded-xl text-sm inline-flex items-center gap-2.5">
+                <span>View My Projects</span>
+                <i class="fa-solid fa-layer-group text-xs"></i>
+              </a>
+              <a href="#contact" class="btn-silver-outline px-6 py-3.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2.5">
+                <span>Contact Me</span>
+                <i class="fa-regular fa-paper-plane text-xs text-[#C0C0C0]"></i>
+              </a>
             </div>
-          </div>
 
-          <div class="about-specs-stack reveal">
-            <div class="spec-card">
-              <div class="spec-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div>
-                <div class="spec-label">Academic Qualification</div>
-                <div class="spec-value">B.Tech in Computer Science &amp; Engineering (2026)</div>
+            <!-- Social Profiles & Location Bar -->
+            <div class="hero-animate delay-500 pt-4 flex flex-wrap items-center gap-5 border-t border-[#C0C0C0]/15 max-w-xl">
+              <div class="flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn Profile of Hamdha Fathima P"
+                   class="w-10 h-10 rounded-xl bg-[#141414] border border-[#C0C0C0]/25 flex items-center justify-center text-[#C0C0C0] hover:text-[#080808] hover:bg-[#E5E5E5] hover:border-[#E5E5E5] transition-all duration-300">
+                  <i class="fa-brands fa-linkedin-in text-base"></i>
+                </a>
+                <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer"
+                   aria-label="GitHub Profile of Hamdha Fathima P"
+                   class="w-10 h-10 rounded-xl bg-[#141414] border border-[#C0C0C0]/25 flex items-center justify-center text-[#C0C0C0] hover:text-[#080808] hover:bg-[#E5E5E5] hover:border-[#E5E5E5] transition-all duration-300">
+                  <i class="fa-brands fa-github text-base"></i>
+                </a>
               </div>
-            </div>
-
-            <div class="spec-card">
-              <div class="spec-icon"><i class="fa-solid fa-server"></i></div>
-              <div>
-                <div class="spec-label">Current Specialization</div>
-                <div class="spec-value">DevOps Engineering at Zoople Technologies</div>
-              </div>
-            </div>
-
-            <div class="spec-card">
-              <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <div>
-                <div class="spec-label">Completed Certification Course</div>
-                <div class="spec-value">Cybersecurity Course &ndash; Techmaghi</div>
-              </div>
-            </div>
-
-            <div class="spec-card">
-              <div class="spec-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <div class="spec-label">Base Location</div>
-                <div class="spec-value">Kerala, India</div>
+              <span class="h-5 w-px bg-[#C0C0C0]/20 hidden sm:inline-block"></span>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-[#A0A0A0]">
+                <i class="fa-solid fa-location-dot text-[#C0C0C0]"></i>
+                <span>Kerala, India</span>
               </div>
             </div>
           </div>
+
+          <!-- Right Column: Compact, Tasteful Profile Photo Card -->
+          <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center hero-animate delay-300">
+            <div class="w-full max-w-[260px] sm:max-w-[280px]">
+              <div class="profile-frame">
+                <div class="relative rounded-[1rem] overflow-hidden bg-[#121212] aspect-square flex items-center justify-center">
+                  <!--
+                    ====================================================================
+                    HOW TO REPLACE WITH YOUR ACTUAL PHOTO:
+                    1. Replace the `src` URL below with the path or URL to your photo
+                       (e.g., src="profile.jpg" or src="images/hamdha.jpg").
+                    2. Remove the fallback monogram overlay (`#photo-fallback`) once
+                       your image loads cleanly.
+                    ====================================================================
+                  -->
+                  <img
+                    id="profile-photo"
+                    src="profile-photo.jpg"
+                    alt="Hamdha Fathima P"
+                    class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    onerror="this.style.display='none'; document.getElementById('photo-fallback').classList.remove('hidden');"
+                  />
+
+                  <!-- Elegant Monochrome Placeholder Shown Until Custom Photo Is Added -->
+                  <div id="photo-fallback" class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-[#1a1a1a] via-[#111111] to-[#080808] p-6 text-center">
+                    <div class="w-20 h-20 rounded-full border border-[#C0C0C0]/40 bg-[#181818] flex items-center justify-center mb-3 shadow-inner">
+                      <span class="font-mono-tech text-2xl font-bold silver-gradient-text">HFP</span>
+                    </div>
+                    <p class="text-xs font-medium text-[#E5E5E5] tracking-wide">Hamdha Fathima P</p>
+                    <p class="text-[11px] font-mono-tech text-[#A0A0A0] mt-1">B.Tech CSE '26</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subtle Terminal Caption Below Compact Photo -->
+              <div class="mt-3 px-3.5 py-2 rounded-xl bg-[#141414]/90 border border-[#C0C0C0]/20 flex items-center justify-between text-[11px] font-mono-tech text-[#A0A0A0]">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-[#C0C0C0]"></span>
+                  <span>status: active</span>
+                </span>
+                <span class="text-[#E5E5E5]">CSE &rarr; DevOps</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SKILLS SECTION
+         4. ABOUT ME SECTION
          ====================================================================== -->
-    <section id="skills" class="section-padding">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">02 / Technical Stack</span>
-          <h2 class="section-title">Skills &amp; Technologies</h2>
-          <span class="section-title-bar"></span>
+    <section id="about" class="py-20 sm:py-24 relative border-t border-[#C0C0C0]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+          <!-- Section Header -->
+          <div class="lg:col-span-4 space-y-3">
+            <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">01 / Profile</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+              <span class="silver-gradient-text">About Me</span>
+            </h2>
+            <div class="w-16 h-0.5 bg-gradient-to-r from-[#E5E5E5] to-transparent rounded-full"></div>
+            <p class="text-sm text-[#A0A0A0] pt-2">
+              Driven by curiosity for how clean code meets automated cloud infrastructure.
+            </p>
+          </div>
+
+          <!-- Narrative & Highlight Cards -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="silver-border-gradient rounded-2xl p-6 sm:p-8 space-y-4">
+              <p class="text-base sm:text-lg text-[#F5F5F5] leading-relaxed">
+                I am a <span class="text-white font-semibold">Computer Science Engineering graduate (Class of 2026)</span> with a strong foundation in software development and an enduring interest in cloud computing, cybersecurity, and DevOps engineering.
+              </p>
+              <p class="text-sm sm:text-base text-[#A0A0A0] leading-relaxed">
+                Currently, I am actively developing my DevOps skills at <span class="text-[#E5E5E5] font-medium">Zoople Technologies</span>, exploring the tools, workflows, and automation practices used in modern software delivery and deployment. Alongside my technical studies, completing a certification course in <span class="text-[#E5E5E5] font-medium">Cyber Security from Techmaghi</span> has shaped my appreciation for building secure, dependable systems from the ground up.
+              </p>
+            </div>
+
+            <!-- Key Focus Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="silver-border-gradient rounded-xl p-5">
+                <div class="w-9 h-9 rounded-lg bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center mb-3 text-[#E5E5E5]">
+                  <i class="fa-solid fa-graduation-cap text-sm"></i>
+                </div>
+                <h3 class="text-sm font-semibold text-[#F5F5F5]">B.Tech CSE '26</h3>
+                <p class="text-xs text-[#A0A0A0] mt-1">Strong grounding in programming, databases, and system fundamentals.</p>
+              </div>
+
+              <div class="silver-border-gradient rounded-xl p-5">
+                <div class="w-9 h-9 rounded-lg bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center mb-3 text-[#E5E5E5]">
+                  <i class="fa-solid fa-infinity text-sm"></i>
+                </div>
+                <h3 class="text-sm font-semibold text-[#F5F5F5]">DevOps Journey</h3>
+                <p class="text-xs text-[#A0A0A0] mt-1">Hands-on learning in CI/CD, containers, Linux, and cloud workflows.</p>
+              </div>
+
+              <div class="silver-border-gradient rounded-xl p-5">
+                <div class="w-9 h-9 rounded-lg bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center mb-3 text-[#E5E5E5]">
+                  <i class="fa-solid fa-shield-halved text-sm"></i>
+                </div>
+                <h3 class="text-sm font-semibold text-[#F5F5F5]">Security Mindset</h3>
+                <p class="text-xs text-[#A0A0A0] mt-1">Certified training in cybersecurity fundamentals and safe architecture.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SKILLS SECTION (CATEGORIZED CARDS - NO FAKE PERCENTAGES)
+         ====================================================================== -->
+    <section id="skills" class="py-20 sm:py-24 bg-[#0b0b0b] border-t border-[#C0C0C0]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Title -->
+        <div class="reveal text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">02 / Technical Stack</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            <span class="silver-gradient-text">Skills &amp; Technologies</span>
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A0A0]">
+            Technologies I have learned through academic coursework and those I am actively exploring in my DevOps training.
+          </p>
         </div>
 
-        <div class="skills-grid">
+        <!-- Three Categorized Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+
           <!-- Category 1: Programming & Web Development -->
-          <article class="skill-category-card spotlight-card reveal">
-            <div class="skill-cat-header">
-              <div class="skill-cat-icon">
-                <i class="fa-solid fa-code"></i>
+          <div class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#C0C0C0]/15">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#262626] to-[#121212] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5]">
+                    <i class="fa-solid fa-code text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-[#F5F5F5]">Programming &amp; Web</h3>
+                    <p class="text-xs text-[#A0A0A0]">Core Foundations</p>
+                  </div>
+                </div>
               </div>
-              <h3 class="skill-cat-title">Programming &amp; Web Development</h3>
+
+              <div class="space-y-3">
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-html5 text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">HTML</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-css3-alt text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">CSS</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-js text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">JavaScript</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-python text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">Python</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+              </div>
             </div>
-            <div class="metallic-accent-line" aria-hidden="true"></div>
-            <div class="skill-list">
-              <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML</span>
-              <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS</span>
-              <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
-              <span class="skill-chip"><i class="fa-brands fa-python"></i> Python</span>
+
+            <div class="mt-6 pt-4 border-t border-[#C0C0C0]/10 text-xs text-[#A0A0A0] flex items-center gap-2">
+              <i class="fa-solid fa-terminal text-[#C0C0C0]"></i>
+              <span>Frontend interfaces &amp; scripting fundamentals</span>
             </div>
-          </article>
+          </div>
 
           <!-- Category 2: DevOps & Cloud Technologies -->
-          <article class="skill-category-card spotlight-card reveal">
-            <div class="skill-cat-header">
-              <div class="skill-cat-icon">
-                <i class="fa-solid fa-infinity"></i>
-              </div>
-              <h3 class="skill-cat-title">DevOps &amp; Cloud Technologies</h3>
-            </div>
-            <div class="metallic-accent-line" aria-hidden="true"></div>
-            <div class="skill-list">
-              <span class="skill-chip"><i class="fa-brands fa-linux"></i> Linux</span>
-              <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
-              <span class="skill-chip"><i class="fa-brands fa-docker"></i> Docker</span>
-              <span class="skill-chip"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
-              <span class="skill-chip"><i class="fa-brands fa-jenkins"></i> Jenkins</span>
-              <span class="skill-chip"><i class="fa-brands fa-aws"></i> AWS</span>
-            </div>
-          </article>
-
-          <!-- Category 3: Database -->
-          <article class="skill-category-card spotlight-card reveal">
-            <div class="skill-cat-header">
-              <div class="skill-cat-icon">
-                <i class="fa-solid fa-database"></i>
-              </div>
-              <h3 class="skill-cat-title">Database &amp; Security Foundations</h3>
-            </div>
-            <div class="metallic-accent-line" aria-hidden="true"></div>
-            <div class="skill-list">
-              <span class="skill-chip"><i class="fa-solid fa-table"></i> MySQL</span>
-              <span class="skill-chip"><i class="fa-solid fa-server"></i> PostgreSQL</span>
-              <span class="skill-chip"><i class="fa-solid fa-shield-halved"></i> Cybersecurity Fundamentals</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         CURRENTLY EXPLORING SECTION
-         ====================================================================== -->
-    <section id="learning" class="section-padding section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">03 / Active Roadmap</span>
-          <h2 class="section-title">Currently Exploring</h2>
-          <span class="section-title-bar"></span>
-        </div>
-
-        <!-- Program Header Banner with Animated Status Indicator -->
-        <div class="learning-banner reveal">
-          <div class="learning-institute">
-            <div class="institute-badge-icon">
-              <i class="fa-solid fa-terminal"></i>
-            </div>
+          <div class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
             <div>
-              <h3 class="institute-title">DevOps Engineering &ndash; Zoople Technologies</h3>
-              <p class="institute-subtitle">Hands-on specialization in cloud infrastructure, container orchestration, and automated CI/CD workflows.</p>
-            </div>
-          </div>
-
-          <div class="live-learning-badge">
-            <span class="live-pulse-ring" aria-hidden="true"></span>
-            <span>Currently Learning</span>
-          </div>
-        </div>
-
-        <!-- Structured DevOps Pipeline Modules -->
-        <div class="learning-pipeline">
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 01</span>
-              <div class="pipeline-icon"><i class="fa-brands fa-linux"></i></div>
-            </div>
-            <h4 class="pipeline-title">Linux Administration</h4>
-            <p class="pipeline-desc">System architecture, shell scripting, process management, permissions, and server hardening.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 02</span>
-              <div class="pipeline-icon"><i class="fa-brands fa-git-alt"></i></div>
-            </div>
-            <h4 class="pipeline-title">Git and GitHub</h4>
-            <p class="pipeline-desc">Distributed version control, branching strategies, pull request workflows, and collaborative repositories.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 03</span>
-              <div class="pipeline-icon"><i class="fa-brands fa-docker"></i></div>
-            </div>
-            <h4 class="pipeline-title">Docker and Containerization</h4>
-            <p class="pipeline-desc">Building lightweight images, multi-stage Dockerfiles, container networking, and persistent volumes.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 04</span>
-              <div class="pipeline-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-            </div>
-            <h4 class="pipeline-title">Kubernetes and Container Orchestration</h4>
-            <p class="pipeline-desc">Cluster architecture, pods, deployments, services, scaling, and declarative workload management.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 05</span>
-              <div class="pipeline-icon"><i class="fa-brands fa-jenkins"></i></div>
-            </div>
-            <h4 class="pipeline-title">Jenkins and CI/CD Pipelines</h4>
-            <p class="pipeline-desc">Automated build, test, and deployment pipelines with webhook triggers and pipeline-as-code.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 06</span>
-              <div class="pipeline-icon"><i class="fa-brands fa-aws"></i></div>
-            </div>
-            <h4 class="pipeline-title">AWS Cloud Fundamentals</h4>
-            <p class="pipeline-desc">Core cloud services including EC2 compute, IAM security, VPC networking, and S3 storage.</p>
-          </div>
-
-          <div class="pipeline-node spotlight-card reveal">
-            <div class="pipeline-top">
-              <span class="pipeline-step">MODULE 07</span>
-              <div class="pipeline-icon"><i class="fa-solid fa-gears"></i></div>
-            </div>
-            <h4 class="pipeline-title">DevOps Automation</h4>
-            <p class="pipeline-desc">Streamlining repetitive infrastructure provisioning, configuration consistency, and release reliability.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         PROJECTS SECTION
-         ====================================================================== -->
-    <section id="projects" class="section-padding">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">04 / Featured Engineering Work</span>
-          <h2 class="section-title">Projects</h2>
-          <span class="section-title-bar"></span>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card spotlight-card reveal">
-            <div>
-              <div class="project-visual-header">
-                <div class="project-icon-box">
-                  <i class="fa-solid fa-helicopter"></i>
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#C0C0C0]/15">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#262626] to-[#121212] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5]">
+                    <i class="fa-solid fa-cloud text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-[#F5F5F5]">DevOps &amp; Cloud</h3>
+                    <p class="text-xs text-[#A0A0A0]">Zoople Technologies Track</p>
+                  </div>
                 </div>
-                <span class="project-index">PROJECT // 01</span>
               </div>
 
-              <h3 class="project-title">Institutional Drone Delivery System</h3>
-              <p class="project-desc">
-                A drone-based delivery management system designed for institutions. Uses GPS, IoT sensors, and a centralized platform to manage and track deliveries, focusing on delivering documents, files, and academic materials.
-              </p>
-
-              <div class="project-tags">
-                <span class="project-tag">IoT Sensors</span>
-                <span class="project-tag">GPS Tracking</span>
-                <span class="project-tag">Centralized Platform</span>
-                <span class="project-tag">Logistics Automation</span>
-              </div>
-            </div>
-
-            <div class="project-footer">
-              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub Profile</span>
-              </a>
-              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card spotlight-card reveal">
-            <div>
-              <div class="project-visual-header">
-                <div class="project-icon-box">
-                  <i class="fa-solid fa-hands-asl-interpreting"></i>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-docker text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">Docker</span>
                 </div>
-                <span class="project-index">PROJECT // 02</span>
-              </div>
 
-              <h3 class="project-title">Text to Sign Language Converter</h3>
-              <p class="project-desc">
-                A web-based application that converts typed text into Indian Sign Language representations, thoughtfully designed to bridge communication gaps and improve accessibility.
-              </p>
-
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Indian Sign Language</span>
-                <span class="project-tag">Accessibility</span>
-              </div>
-            </div>
-
-            <div class="project-footer">
-              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub Profile</span>
-              </a>
-              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card spotlight-card reveal">
-            <div>
-              <div class="project-visual-header">
-                <div class="project-icon-box">
-                  <i class="fa-solid fa-microphone-lines"></i>
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-solid fa-dharmachakra text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">Kubernetes</span>
                 </div>
-                <span class="project-index">PROJECT // 03</span>
-              </div>
 
-              <h3 class="project-title">Audio Speech to Sign Language Converter</h3>
-              <p class="project-desc">
-                A system that converts spoken audio into sign language representations, focusing on real-time spoken-to-visual translation to make communication more accessible.
-              </p>
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-jenkins text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">Jenkins</span>
+                </div>
 
-              <div class="project-tags">
-                <span class="project-tag">Speech Recognition</span>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">Sign Language</span>
-                <span class="project-tag">Accessibility</span>
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-git-alt text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">Git</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-github text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">GitHub</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-aws text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">AWS</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-brands fa-linux text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">Linux</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-3.5 py-2.5 flex items-center gap-2.5">
+                  <i class="fa-solid fa-arrows-spin text-[#E5E5E5] w-4 text-center"></i>
+                  <span class="text-sm font-medium text-[#F5F5F5]">CI/CD</span>
+                </div>
               </div>
             </div>
 
-            <div class="project-footer">
-              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-github-placeholder">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub Profile</span>
-              </a>
-              <span class="repo-status-hint">github.com/Hamdha-Fathima-P</span>
+            <div class="mt-6 pt-4 border-t border-[#C0C0C0]/10 text-xs text-[#A0A0A0] flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E5E5E5]"></span>
+                <span>Actively exploring &amp; practicing</span>
+              </span>
+              <span class="font-mono-tech text-[11px] text-[#E5E5E5]">In Progress</span>
             </div>
-          </article>
+          </div>
+
+          <!-- Category 3: Other Technical Skills -->
+          <div class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#C0C0C0]/15">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#262626] to-[#121212] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5]">
+                    <i class="fa-solid fa-server text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-[#F5F5F5]">Other Technical Skills</h3>
+                    <p class="text-xs text-[#A0A0A0]">Data, Security &amp; APIs</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-user-shield text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">Cyber Security</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-[#E5E5E5] border border-[#C0C0C0]/30">Certified</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-database text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">Database Management</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-table text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">SQL</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+
+                <div class="skill-pill rounded-xl px-4 py-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-plug text-[#E5E5E5] w-5 text-center"></i>
+                    <span class="text-sm font-medium text-[#F5F5F5]">REST APIs</span>
+                  </div>
+                  <span class="font-mono-tech text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-[#C0C0C0] border border-[#C0C0C0]/20">Learned</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#C0C0C0]/10 text-xs text-[#A0A0A0] flex items-center gap-2">
+              <i class="fa-solid fa-lock text-[#C0C0C0]"></i>
+              <span>Data integrity, service integration &amp; security</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         EDUCATION SECTION
+         6. EDUCATION & TRAINING TIMELINE SECTION
          ====================================================================== -->
-    <section id="education" class="section-padding section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">05 / Academic Background &amp; Certifications</span>
-          <h2 class="section-title">Education &amp; Certifications</h2>
-          <span class="section-title-bar"></span>
+    <section id="education" class="py-20 sm:py-24 border-t border-[#C0C0C0]/10">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="reveal text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">03 / Academic &amp; Training Path</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            <span class="silver-gradient-text">Education &amp; Training</span>
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A0A0]">
+            My academic milestone in Computer Science Engineering alongside specialized training in DevOps and Cyber Security.
+          </p>
         </div>
 
-        <div class="timeline-container">
-          <div class="timeline-item spotlight-card reveal">
-            <span class="timeline-node-dot" aria-hidden="true"></span>
-            <div class="timeline-year-badge">
-              <i class="fa-regular fa-calendar"></i>
-              <span>Graduation Year: 2026</span>
-            </div>
-            <h3 class="timeline-degree">B.Tech &ndash; Computer Science and Engineering</h3>
-            <div class="timeline-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Kerala, India</span>
-              <span><i class="fa-solid fa-laptop-code"></i> Computer Science &amp; Engineering</span>
+        <!-- Vertical Silver Timeline -->
+        <div class="relative pl-8 sm:pl-12 space-y-10">
+          <!-- Vertical Connecting Silver Line -->
+          <div class="absolute left-3.5 sm:left-5 top-2 bottom-2 w-[2px] timeline-line"></div>
+
+          <!-- Timeline Item 1: Professional Training (Current) -->
+          <div class="reveal relative">
+            <!-- Silver Node -->
+            <div class="absolute -left-[25px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-[#080808] border-2 border-[#E5E5E5] shadow-[0_0_12px_rgba(229,229,229,0.6)]"></div>
+
+            <div class="silver-border-gradient rounded-2xl p-6 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="font-mono-tech text-xs uppercase tracking-wider text-[#C0C0C0]">Professional Training</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono-tech bg-white/10 text-[#E5E5E5] border border-[#E5E5E5]/30">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#E5E5E5] animate-pulse"></span>
+                  Currently Learning
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F5F5]">DevOps Engineering</h3>
+              <p class="text-sm font-medium text-[#C0C0C0] mt-0.5 flex items-center gap-2">
+                <i class="fa-solid fa-building text-xs"></i>
+                <span>Zoople Technologies</span>
+              </p>
+              <p class="text-sm text-[#A0A0A0] mt-3 leading-relaxed">
+                Focused on practical Linux administration, Git &amp; GitHub version control, Docker containerization, Kubernetes orchestration, Jenkins automation, AWS cloud services, and end-to-end CI/CD pipeline workflows.
+              </p>
             </div>
           </div>
 
-          <div class="timeline-item spotlight-card reveal">
-            <span class="timeline-node-dot" aria-hidden="true"></span>
-            <div class="timeline-year-badge">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Certification Course</span>
-            </div>
-            <h3 class="timeline-degree">Cybersecurity Course</h3>
-            <div class="timeline-meta">
-              <span><i class="fa-solid fa-building-columns"></i> Techmaghi</span>
-              <span><i class="fa-solid fa-lock"></i> Information &amp; Network Security Fundamentals</span>
+          <!-- Timeline Item 2: Education -->
+          <div class="reveal relative">
+            <!-- Silver Node -->
+            <div class="absolute -left-[25px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-[#141414] border-2 border-[#C0C0C0]"></div>
+
+            <div class="silver-border-gradient rounded-2xl p-6 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="font-mono-tech text-xs uppercase tracking-wider text-[#C0C0C0]">Education</span>
+                <span class="px-3 py-1 rounded-full text-xs font-mono-tech bg-[#1c1c1c] text-[#E5E5E5] border border-[#C0C0C0]/25">
+                  Graduate &ndash; 2026
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F5F5]">Bachelor of Technology (B.Tech)</h3>
+              <p class="text-sm font-medium text-[#C0C0C0] mt-0.5 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-xs"></i>
+                <span>Computer Science and Engineering</span>
+              </p>
+              <p class="text-sm text-[#A0A0A0] mt-3 leading-relaxed">
+                Completed undergraduate engineering studies in Computer Science, building strong analytical skills in software engineering, database management systems, computer networks, and problem-solving.
+              </p>
             </div>
           </div>
+
+          <!-- Timeline Item 3: Additional Course -->
+          <div class="reveal relative">
+            <!-- Silver Node -->
+            <div class="absolute -left-[25px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-[#141414] border-2 border-[#C0C0C0]"></div>
+
+            <div class="silver-border-gradient rounded-2xl p-6 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="font-mono-tech text-xs uppercase tracking-wider text-[#C0C0C0]">Additional Course</span>
+                <span class="px-3 py-1 rounded-full text-xs font-mono-tech bg-[#1c1c1c] text-[#E5E5E5] border border-[#C0C0C0]/25">
+                  Course Completed
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-[#F5F5F5]">Cyber Security</h3>
+              <p class="text-sm font-medium text-[#C0C0C0] mt-0.5 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-xs"></i>
+                <span>Techmaghi</span>
+              </p>
+              <p class="text-sm text-[#A0A0A0] mt-3 leading-relaxed">
+                Gained foundational knowledge in information security principles, network protection, vulnerability awareness, and defensive security practices.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         CONTACT SECTION
+         7. PROJECTS SHOWCASE SECTION
          ====================================================================== -->
-    <section id="contact" class="section-padding">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">06 / Get In Touch</span>
-          <h2 class="section-title">Contact</h2>
-          <span class="section-title-bar"></span>
+    <section id="projects" class="py-20 sm:py-24 bg-[#0b0b0b] border-t border-[#C0C0C0]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div class="space-y-3">
+            <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">04 / Featured Work</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+              <span class="silver-gradient-text">Academic &amp; Development Projects</span>
+            </h2>
+          </div>
+          <p class="text-sm text-[#A0A0A0] max-w-md">
+            Systems engineered to solve real-world institutional logistics and human communication accessibility challenges.
+          </p>
         </div>
 
-        <div class="contact-wrapper reveal">
-          <div class="contact-grid">
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Project 1: Institutional Drone Delivery System -->
+          <article class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
             <div>
-              <h3 class="contact-closing silver-text">
-                Let's Connect, Collaborate &amp; Build Something Meaningful.
+              <!-- Top Visual Header / Custom SVG Illustration -->
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#242424] to-[#101010] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5] group-hover:border-[#E5E5E5] transition-colors">
+                  <!-- Crisp Custom Drone SVG Icon -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="5" cy="5" r="3" />
+                    <circle cx="19" cy="5" r="3" />
+                    <circle cx="5" cy="19" r="3" />
+                    <circle cx="19" cy="19" r="3" />
+                    <line x1="7.2" y1="7.2" x2="10" y2="10" />
+                    <line x1="16.8" y1="7.2" x2="14" y2="10" />
+                    <line x1="7.2" y1="16.8" x2="10" y2="14" />
+                    <line x1="16.8" y1="16.8" x2="14" y2="14" />
+                    <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
+                  </svg>
+                </div>
+                <span class="font-mono-tech text-xs text-[#A0A0A0]">PROJECT // 01</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-[#F5F5F5] group-hover:text-white transition-colors mb-3">
+                Institutional Drone Delivery System
               </h3>
-              <p class="contact-subtext">
-                Whether you have an entry-level DevOps opportunity, a cloud automation project, or simply want to connect professionally, feel free to reach out directly.
-              </p>
 
-              <div class="contact-cta-group">
-                <a href="mailto:hamdhafathima@gmail.com" class="btn-primary">
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <span>Send an Email</span>
-                </a>
-                <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                  <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                  <i class="fa-brands fa-github"></i>
-                  <span>GitHub</span>
-                </a>
-              </div>
+              <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                A drone-based delivery management system designed for institutions such as colleges and hospitals. Utilizes GPS, IoT sensors, and predefined routes to manage and track the autonomous transport of documents, files, and academic materials.
+              </p>
             </div>
 
-            <div class="contact-cards">
-              <!-- Email Card -->
-              <div class="contact-detail-card">
-                <div class="contact-detail-left">
-                  <div class="contact-detail-icon">
-                    <i class="fa-regular fa-envelope"></i>
-                  </div>
-                  <div>
-                    <div class="contact-detail-label">Email Address</div>
-                    <a href="mailto:hamdhafathima@gmail.com" class="contact-detail-value">hamdhafathima@gmail.com</a>
-                  </div>
-                </div>
-                <button type="button" class="btn-copy-mini" id="copyEmailBtn" aria-label="Copy Email Address">
-                  <i class="fa-regular fa-copy"></i>
-                  <span>Copy</span>
-                </button>
+            <div class="space-y-5">
+              <!-- Technology Tags -->
+              <div class="flex flex-wrap gap-2">
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">IoT Sensors</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">GPS Tracking</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Route Automation</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Python / Web</span>
               </div>
 
-              <!-- Phone Card -->
-              <div class="contact-detail-card">
-                <div class="contact-detail-left">
-                  <div class="contact-detail-icon">
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                  <div>
-                    <div class="contact-detail-label">Phone Number</div>
-                    <a href="tel:+919048996414" class="contact-detail-value">+91 9048996414</a>
-                  </div>
+              <!-- View Project Button -->
+              <button type="button" onclick="openProjectModal(0)"
+                class="w-full py-2.5 px-4 rounded-xl btn-silver-outline text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer">
+                <span>View Project</span>
+                <i class="fa-solid fa-arrow-right text-[11px] text-[#C0C0C0]"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: Text to Sign Language Converter -->
+          <article class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#242424] to-[#101010] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5] group-hover:border-[#E5E5E5] transition-colors">
+                  <i class="fa-solid fa-hands-asl-interpreting text-xl"></i>
                 </div>
-                <button type="button" class="btn-copy-mini" id="copyPhoneBtn" aria-label="Copy Phone Number">
-                  <i class="fa-regular fa-copy"></i>
-                  <span>Copy</span>
-                </button>
+                <span class="font-mono-tech text-xs text-[#A0A0A0]">PROJECT // 02</span>
               </div>
 
-              <!-- LinkedIn Card -->
-              <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
-                <div class="contact-detail-left">
-                  <div class="contact-detail-icon">
-                    <i class="fa-brands fa-linkedin-in"></i>
+              <h3 class="text-xl font-bold text-[#F5F5F5] group-hover:text-white transition-colors mb-3">
+                Text to Sign Language Converter
+              </h3>
+
+              <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                A web-based accessibility application that converts typed text into Indian Sign Language (ISL) visual representations, helping bridge communication gaps for individuals with hearing and speech impairments.
+              </p>
+            </div>
+
+            <div class="space-y-5">
+              <!-- Technology Tags -->
+              <div class="flex flex-wrap gap-2">
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">HTML / CSS</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">JavaScript</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Indian Sign Language</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Accessibility</span>
+              </div>
+
+              <!-- View Project Button -->
+              <button type="button" onclick="openProjectModal(1)"
+                class="w-full py-2.5 px-4 rounded-xl btn-silver-outline text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer">
+                <span>View Project</span>
+                <i class="fa-solid fa-arrow-right text-[11px] text-[#C0C0C0]"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Audio Speech to Sign Language Converter -->
+          <article class="reveal silver-border-gradient rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#242424] to-[#101010] border border-[#C0C0C0]/30 flex items-center justify-center text-[#E5E5E5] group-hover:border-[#E5E5E5] transition-colors">
+                  <i class="fa-solid fa-waveform-lines fa-microphone-lines text-xl"></i>
+                </div>
+                <span class="font-mono-tech text-xs text-[#A0A0A0]">PROJECT // 03</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-[#F5F5F5] group-hover:text-white transition-colors mb-3">
+                Audio Speech to Sign Language Converter
+              </h3>
+
+              <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                An interactive communication system that captures spoken audio, processes speech recognition, and translates spoken words into sign language representations to support inclusive, real-time accessibility.
+              </p>
+            </div>
+
+            <div class="space-y-5">
+              <!-- Technology Tags -->
+              <div class="flex flex-wrap gap-2">
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Speech Recognition</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Python</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">JavaScript</span>
+                <span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/20">Assistive Tech</span>
+              </div>
+
+              <!-- View Project Button -->
+              <button type="button" onclick="openProjectModal(2)"
+                class="w-full py-2.5 px-4 rounded-xl btn-silver-outline text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer">
+                <span>View Project</span>
+                <i class="fa-solid fa-arrow-right text-[11px] text-[#C0C0C0]"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. CERTIFICATIONS SECTION
+         ====================================================================== -->
+    <section id="certifications" class="py-20 sm:py-24 border-t border-[#C0C0C0]/10">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="reveal text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">05 / Credentials</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            <span class="silver-gradient-text">Certifications</span>
+          </h2>
+        </div>
+
+        <!-- Certificate-Style Card with Subtle Silver Glow -->
+        <div class="reveal max-w-3xl mx-auto">
+          <div class="relative rounded-2xl p-[1px] bg-gradient-to-r from-[#6e6e6e] via-[#E5E5E5] to-[#6e6e6e] shadow-[0_0_35px_rgba(192,192,192,0.14)]">
+            <div class="rounded-2xl bg-gradient-to-br from-[#161616] via-[#0e0e0e] to-[#141414] p-6 sm:p-10 relative overflow-hidden">
+              <!-- Decorative Corner Filigree Lines -->
+              <div class="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#C0C0C0]/40 rounded-tl-md"></div>
+              <div class="absolute top-3 right-3 w-6 h-6 border-t border-r border-[#C0C0C0]/40 rounded-tr-md"></div>
+              <div class="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-[#C0C0C0]/40 rounded-bl-md"></div>
+              <div class="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[#C0C0C0]/40 rounded-br-md"></div>
+
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex items-start gap-4 sm:gap-5">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-b from-[#292929] to-[#121212] border border-[#E5E5E5]/40 flex items-center justify-center shrink-0 shadow-inner">
+                    <i class="fa-solid fa-shield-halved text-2xl text-[#E5E5E5]"></i>
                   </div>
-                  <div>
-                    <div class="contact-detail-label">LinkedIn</div>
-                    <div class="contact-detail-value">linkedin.com/in/hamdhafathimap</div>
+                  <div class="space-y-1.5">
+                    <div class="inline-flex items-center gap-2 font-mono-tech text-[11px] uppercase tracking-widest text-[#C0C0C0]">
+                      <i class="fa-solid fa-certificate text-[#E5E5E5]"></i>
+                      <span>Certificate of Completion</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-[#F5F5F5]">
+                      Cyber Security Course
+                    </h3>
+                    <p class="text-sm font-medium text-[#C0C0C0]">
+                      Issued by <span class="text-[#F5F5F5]">Techmaghi</span>
+                    </p>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] pt-1 max-w-xl leading-relaxed">
+                      Completed comprehensive training covering core cybersecurity concepts, threat awareness, network defense fundamentals, and safe digital practices.
+                    </p>
                   </div>
                 </div>
-                <span class="btn-copy-mini">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </span>
-              </a>
 
-              <!-- GitHub Card -->
-              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
-                <div class="contact-detail-left">
-                  <div class="contact-detail-icon">
-                    <i class="fa-brands fa-github"></i>
-                  </div>
-                  <div>
-                    <div class="contact-detail-label">GitHub</div>
-                    <div class="contact-detail-value">github.com/Hamdha-Fathima-P</div>
-                  </div>
-                </div>
-                <span class="btn-copy-mini">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </span>
-              </a>
-
-              <!-- Location Card -->
-              <div class="contact-detail-card">
-                <div class="contact-detail-left">
-                  <div class="contact-detail-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                  </div>
-                  <div>
-                    <div class="contact-detail-label">Location</div>
-                    <div class="contact-detail-value">Kerala, India</div>
-                  </div>
+                <div class="self-end sm:self-center shrink-0">
+                  <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono-tech bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/30">
+                    <i class="fa-solid fa-check text-[10px]"></i>
+                    <span>Completed</span>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. CURRENTLY LEARNING SPOTLIGHT SECTION
+         ====================================================================== -->
+    <section id="learning" class="py-20 sm:py-24 bg-[#0b0b0b] border-t border-[#C0C0C0]/10 relative overflow-hidden">
+      <div class="silver-orb w-80 h-80 top-10 right-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal silver-border-gradient rounded-3xl p-7 sm:p-10 lg:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+            <!-- Left Narrative -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-[#C0C0C0]/25 font-mono-tech text-xs text-[#E5E5E5]">
+                <i class="fa-solid fa-compass text-[#C0C0C0]"></i>
+                <span>Zoople Technologies</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                <span class="silver-gradient-text">Currently Learning &amp; Exploring</span>
+              </h2>
+
+              <p class="text-sm sm:text-base text-[#A0A0A0] leading-relaxed">
+                I am deeply interested in learning the complete lifecycle of how modern applications are built, packaged, deployed, automated, and maintained in production environments.
+              </p>
+
+              <p class="text-xs font-mono-tech text-[#C0C0C0] pt-1">
+                // Building practical fluency step by step
+              </p>
+            </div>
+
+            <!-- Right Interactive Exploration Grid -->
+            <div class="lg:col-span-7">
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-brands fa-linux text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Linux</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-brands fa-git-alt text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Git &amp; GitHub</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-brands fa-docker text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Docker</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-solid fa-dharmachakra text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Kubernetes</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-brands fa-jenkins text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Jenkins</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-brands fa-aws text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">AWS</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-solid fa-code-branch text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">CI/CD Pipelines</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-solid fa-cubes text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Containerization</span>
+                </div>
+
+                <div class="skill-pill rounded-xl p-3.5 flex items-center gap-3">
+                  <i class="fa-solid fa-cloud-arrow-up text-[#E5E5E5] text-base w-5 text-center"></i>
+                  <span class="text-xs sm:text-sm font-medium text-[#F5F5F5]">Cloud Computing</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact" class="py-20 sm:py-24 border-t border-[#C0C0C0]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="reveal text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C0C0C0]">06 / Get In Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            <span class="silver-gradient-text">Contact Me</span>
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A0A0]">
+            Feel free to reach out for entry-level DevOps opportunities, software roles, or technical collaborations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
+          <!-- Left Column: Direct Contact Cards -->
+          <div class="reveal lg:col-span-5 space-y-4">
+            <!-- Email Card -->
+            <a href="mailto:hamdhafathima@gmail.com"
+               class="silver-border-gradient rounded-2xl p-5 flex items-center gap-4 group block">
+              <div class="w-11 h-11 rounded-xl bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center text-[#E5E5E5] group-hover:bg-[#E5E5E5] group-hover:text-[#080808] transition-colors shrink-0">
+                <i class="fa-regular fa-envelope text-base"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-mono-tech uppercase tracking-wider text-[#A0A0A0]">Email</p>
+                <p class="text-sm sm:text-base font-medium text-[#F5F5F5] truncate group-hover:text-white">
+                  hamdhafathima@gmail.com
+                </p>
+              </div>
+            </a>
+
+            <!-- Phone Card -->
+            <a href="tel:9048996414"
+               class="silver-border-gradient rounded-2xl p-5 flex items-center gap-4 group block">
+              <div class="w-11 h-11 rounded-xl bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center text-[#E5E5E5] group-hover:bg-[#E5E5E5] group-hover:text-[#080808] transition-colors shrink-0">
+                <i class="fa-solid fa-phone text-base"></i>
+              </div>
+              <div>
+                <p class="text-xs font-mono-tech uppercase tracking-wider text-[#A0A0A0]">Phone</p>
+                <p class="text-sm sm:text-base font-medium text-[#F5F5F5] group-hover:text-white">
+                  +91 9048996414
+                </p>
+              </div>
+            </a>
+
+            <!-- Location Card -->
+            <div class="silver-border-gradient rounded-2xl p-5 flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl bg-white/5 border border-[#C0C0C0]/25 flex items-center justify-center text-[#E5E5E5] shrink-0">
+                <i class="fa-solid fa-location-dot text-base"></i>
+              </div>
+              <div>
+                <p class="text-xs font-mono-tech uppercase tracking-wider text-[#A0A0A0]">Location</p>
+                <p class="text-sm sm:text-base font-medium text-[#F5F5F5]">
+                  Kerala, India
+                </p>
+              </div>
+            </div>
+
+            <!-- Social Profiles Row -->
+            <div class="grid grid-cols-2 gap-4 pt-1">
+              <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer"
+                 class="silver-border-gradient rounded-2xl p-4 flex items-center justify-center gap-2.5 text-sm font-medium text-[#E5E5E5] hover:text-white">
+                <i class="fa-brands fa-linkedin text-base"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer"
+                 class="silver-border-gradient rounded-2xl p-4 flex items-center justify-center gap-2.5 text-sm font-medium text-[#E5E5E5] hover:text-white">
+                <i class="fa-brands fa-github text-base"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Mailto-Assisted Contact Form -->
+          <div class="reveal lg:col-span-7">
+            <div class="silver-border-gradient rounded-2xl p-6 sm:p-8">
+              <h3 class="text-lg font-bold text-[#F5F5F5] mb-1">Send a Direct Message</h3>
+              <p class="text-xs text-[#A0A0A0] mb-6">
+                Fill out the fields below to prepare a pre-filled email in your default mail client.
+              </p>
+
+              <form id="contact-form" class="space-y-4" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="sender-name" class="block text-xs font-mono-tech uppercase tracking-wider text-[#C0C0C0] mb-1.5">
+                      Your Name
+                    </label>
+                    <input type="text" id="sender-name" name="name" required placeholder="e.g. Rahul Menon"
+                      class="w-full px-4 py-3 rounded-xl bg-[#0c0c0c] border border-[#C0C0C0]/25 text-sm text-[#F5F5F5] placeholder-[#666666] focus:outline-none focus:border-[#E5E5E5] transition-colors" />
+                  </div>
+
+                  <div>
+                    <label for="sender-email" class="block text-xs font-mono-tech uppercase tracking-wider text-[#C0C0C0] mb-1.5">
+                      Your Email
+                    </label>
+                    <input type="email" id="sender-email" name="email" required placeholder="you@example.com"
+                      class="w-full px-4 py-3 rounded-xl bg-[#0c0c0c] border border-[#C0C0C0]/25 text-sm text-[#F5F5F5] placeholder-[#666666] focus:outline-none focus:border-[#E5E5E5] transition-colors" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="sender-subject" class="block text-xs font-mono-tech uppercase tracking-wider text-[#C0C0C0] mb-1.5">
+                    Subject
+                  </label>
+                  <input type="text" id="sender-subject" name="subject" required placeholder="Opportunity / Collaboration Inquiry"
+                    class="w-full px-4 py-3 rounded-xl bg-[#0c0c0c] border border-[#C0C0C0]/25 text-sm text-[#F5F5F5] placeholder-[#666666] focus:outline-none focus:border-[#E5E5E5] transition-colors" />
+                </div>
+
+                <div>
+                  <label for="sender-message" class="block text-xs font-mono-tech uppercase tracking-wider text-[#C0C0C0] mb-1.5">
+                    Message
+                  </label>
+                  <textarea id="sender-message" name="message" rows="4" required placeholder="Write your message here..."
+                    class="w-full px-4 py-3 rounded-xl bg-[#0c0c0c] border border-[#C0C0C0]/25 text-sm text-[#F5F5F5] placeholder-[#666666] focus:outline-none focus:border-[#E5E5E5] transition-colors resize-none"></textarea>
+                </div>
+
+                <!-- Feedback Banner (Honest UI feedback) -->
+                <div id="form-feedback" class="hidden rounded-xl p-3.5 text-xs border"></div>
+
+                <div class="pt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <button type="submit" class="btn-silver-primary px-7 py-3.5 rounded-xl text-sm inline-flex items-center justify-center gap-2.5 cursor-pointer">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                  </button>
+                  <span class="text-[11px] text-[#A0A0A0]">
+                    Opens your email app addressed to <span class="text-[#E5E5E5]">hamdhafathima@gmail.com</span>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
 
   <!-- ========================================================================
-       FOOTER
+       13. FOOTER
        ======================================================================== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>&copy; <span id="currentYear"></span> Hamdha Fathima P. All rights reserved.</div>
-      <div>
-        <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-        <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer">LinkedIn</a> &bull;
-        <a href="tel:+919048996414">+91 9048996414</a>
+  <footer class="bg-[#060606] border-t border-[#C0C0C0]/15 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Name & Tagline -->
+        <div class="text-center md:text-left">
+          <p class="text-base font-bold text-[#F5F5F5]">Hamdha Fathima P</p>
+          <p class="text-xs text-[#A0A0A0] mt-1">
+            Computer Science Engineering Graduate &bull; Aspiring DevOps Engineer
+          </p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.linkedin.com/in/hamdhafathimap" target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn"
+             class="w-9 h-9 rounded-lg bg-[#141414] border border-[#C0C0C0]/20 flex items-center justify-center text-[#C0C0C0] hover:text-[#080808] hover:bg-[#E5E5E5] transition-colors">
+            <i class="fa-brands fa-linkedin-in text-sm"></i>
+          </a>
+          <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub"
+             class="w-9 h-9 rounded-lg bg-[#141414] border border-[#C0C0C0]/20 flex items-center justify-center text-[#C0C0C0] hover:text-[#080808] hover:bg-[#E5E5E5] transition-colors">
+            <i class="fa-brands fa-github text-sm"></i>
+          </a>
+          <a href="mailto:hamdhafathima@gmail.com"
+             aria-label="Email"
+             class="w-9 h-9 rounded-lg bg-[#141414] border border-[#C0C0C0]/20 flex items-center justify-center text-[#C0C0C0] hover:text-[#080808] hover:bg-[#E5E5E5] transition-colors">
+            <i class="fa-regular fa-envelope text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-xs text-[#A0A0A0]">
+          &copy; <span id="current-year">2026</span> Hamdha Fathima P. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to Top">
-    <i class="fa-solid fa-chevron-up"></i>
+  <!-- ========================================================================
+       SCROLL-TO-TOP FLOATING BUTTON
+       ======================================================================== -->
+  <button id="scroll-top-btn" type="button" aria-label="Scroll back to top"
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-[#141414]/90 border border-[#C0C0C0]/35 text-[#E5E5E5] shadow-lg backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-[#E5E5E5] hover:text-[#080808] cursor-pointer">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
   </button>
 
-  <!-- Toast Notification Element -->
-  <div class="toast-notification" id="toast" role="status" aria-live="polite">
-    <i class="fa-solid fa-circle-info"></i>
-    <span id="toastMessage">Notification</span>
+  <!-- ========================================================================
+       INTERACTIVE PROJECT DETAILS MODAL (HONEST REPO PLACEHOLDERS)
+       ======================================================================== -->
+  <div id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
+    <div class="w-full max-w-xl rounded-2xl bg-[#121212] border border-[#C0C0C0]/35 shadow-2xl overflow-hidden transform transition-all">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-[#181818] border-b border-[#C0C0C0]/15 flex items-center justify-between">
+        <span id="modal-tag" class="font-mono-tech text-xs text-[#C0C0C0] uppercase tracking-wider">PROJECT DETAILS</span>
+        <button type="button" onclick="closeProjectModal()" aria-label="Close modal"
+          class="w-8 h-8 rounded-lg bg-white/5 text-[#A0A0A0] hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors cursor-pointer">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-7 space-y-5">
+        <h3 id="modal-title" class="text-2xl font-bold text-[#F5F5F5]">Project Title</h3>
+        <p id="modal-description" class="text-sm text-[#A0A0A0] leading-relaxed"></p>
+
+        <div>
+          <h4 class="font-mono-tech text-xs uppercase tracking-wider text-[#C0C0C0] mb-2">Key Highlights</h4>
+          <ul id="modal-highlights" class="space-y-2 text-sm text-[#E5E5E5]"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono-tech text-xs uppercase tracking-wider text-[#C0C0C0] mb-2">Technologies</h4>
+          <div id="modal-tech" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Honest Placeholder Notice for Repository Link -->
+        <div class="rounded-xl bg-[#0a0a0a] border border-[#C0C0C0]/20 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-start gap-2.5">
+            <i class="fa-brands fa-github text-[#C0C0C0] mt-0.5"></i>
+            <p class="text-xs text-[#A0A0A0]">
+              Repository link placeholder — public documentation &amp; source code can be shared upon request or via GitHub profile.
+            </p>
+          </div>
+          <a href="https://github.com/Hamdha-Fathima-P" target="_blank" rel="noopener noreferrer"
+            class="shrink-0 px-3.5 py-2 rounded-lg btn-silver-outline text-xs font-semibold text-center">
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ========================================================================
-       VANILLA JAVASCRIPT INTERACTIONS & ANIMATIONS
+       VANILLA JAVASCRIPT: INTERACTIVITY, CANVAS PARTICLES, SCROLL & MODALS
        ======================================================================== -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      /* ----------------------------------------------------------------------
-         7. COPY EMAIL & PHONE BUTTONS
-         ---------------------------------------------------------------------- */
-      function copyTextToClipboard(text, successMessage, fallbackMessage) {
-        const tempInput = document.createElement("input");
-        tempInput.value = text;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        try {
-          document.execCommand("copy");
-          showToast(successMessage);
-        } catch (err) {
-          showToast(fallbackMessage);
+    // 1. Preloader Dismissal
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('hidden-loader');
+      }, 450);
+    });
+
+    // 2. Dynamic Copyright Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 3. Mobile Navigation Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+      menuIcon.className = isHidden ? 'fa-solid fa-bars text-base' : 'fa-solid fa-xmark text-base';
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.className = 'fa-solid fa-bars text-base';
+      });
+    });
+
+    // 4. Navbar Glass Background & Scroll-to-Top Visibility + Active Section Highlighting
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      // Sticky Navbar styling
+      if (scrollY > 30) {
+        navbar.classList.add('bg-[#080808]/90', 'backdrop-blur-xl', 'border-[#C0C0C0]/15', 'shadow-lg');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-[#080808]/90', 'backdrop-blur-xl', 'border-[#C0C0C0]/15', 'shadow-lg');
+        navbar.classList.add('border-transparent');
+      }
+
+      // Scroll-to-Top button visibility
+      if (scrollY > 450) {
+        scrollTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      }
+
+      // Active navigation link highlighting
+      let currentSectionId = 'home';
+      sections.forEach((sec) => {
+        const top = sec.offsetTop - 140;
+        const height = sec.offsetHeight;
+        if (scrollY >= top && scrollY < top + height) {
+          currentSectionId = sec.getAttribute('id');
         }
-        document.body.removeChild(tempInput);
-      }
+      });
 
-      const copyEmailBtn = document.getElementById("copyEmailBtn");
-      if (copyEmailBtn) {
-        copyEmailBtn.addEventListener("click", () => {
-          copyTextToClipboard(
-            "hamdhafathima@gmail.com",
-            "Email copied to clipboard: hamdhafathima@gmail.com",
-            "Email: hamdhafathima@gmail.com"
-          );
-        });
-      }
-
-      const copyPhoneBtn = document.getElementById("copyPhoneBtn");
-      if (copyPhoneBtn) {
-        copyPhoneBtn.addEventListener("click", () => {
-          copyTextToClipboard(
-            "+91 9048996414",
-            "Phone number copied to clipboard: +91 9048996414",
-            "Phone: +91 9048996414"
-          );
-        });
-      }
-
-      /* ----------------------------------------------------------------------
-         8. SUBTLE SILVER GEOMETRIC PARTICLE NETWORK (HERO CANVAS)
-         ---------------------------------------------------------------------- */
-      const canvas = document.getElementById("hero-canvas");
-      if (canvas) {
-        const ctx = canvas.getContext("2d");
-        let particles = [];
-        let animationFrameId;
-
-        function resizeCanvas() {
-          const heroSection = canvas.parentElement;
-          canvas.width = heroSection ? heroSection.offsetWidth : window.innerWidth;
-          canvas.height = heroSection ? heroSection.offsetHeight : window.innerHeight;
-          initParticles();
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
         }
+      });
+    }
 
-        function initParticles() {
-          particles = [];
-          const count = Math.min(48, Math.floor((canvas.width * canvas.height) / 24000));
-          for (let i = 0; i < count; i++) {
-            particles.push({
-              x: Math.random() * canvas.width,
-              y: Math.random() * canvas.height,
-              vx: (Math.random() - 0.5) * 0.35,
-              vy: (Math.random() - 0.5) * 0.35,
-              radius: Math.random() * 1.6 + 0.7
-            });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 5. IntersectionObserver for Smooth Scroll-Reveal Animations
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+
+    // 6. Subtle Interactive Metallic Particle Network in Hero Section
+    (function initHeroParticles() {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height, particles;
+      const mouse = { x: null, y: null, radius: 130 };
+
+      function resizeCanvas() {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+        const count = Math.min(Math.floor((width * height) / 18000), 65);
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.45,
+            vy: (Math.random() - 0.5) * 0.45,
+            size: Math.random() * 1.8 + 0.8
+          });
         }
+      }
 
-        function drawParticles() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
+      window.addEventListener('resize', resizeCanvas);
+      window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        if (e.clientY <= rect.bottom) {
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
+        } else {
+          mouse.x = null;
+          mouse.y = null;
+        }
+      });
 
-          for (let i = 0; i < particles.length; i++) {
-            const p = particles[i];
-            p.x += p.vx;
-            p.y += p.vy;
+      function animateParticles() {
+        ctx.clearRect(0, 0, width, height);
 
-            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
 
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = "rgba(192, 192, 192, 0.35)";
-            ctx.fill();
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
 
-            for (let j = i + 1; j < particles.length; j++) {
-              const p2 = particles[j];
-              const dx = p.x - p2.x;
-              const dy = p.y - p2.y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
+          // Draw silver node
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(210, 210, 210, 0.55)';
+          ctx.fill();
 
-              if (dist < 135) {
-                const alpha = (1 - dist / 135) * 0.14;
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = `rgba(192, 192, 192, ${alpha})`;
-                ctx.lineWidth = 0.8;
-                ctx.stroke();
-              }
+          // Connect nearby nodes
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p.x - p2.x;
+            const dy = p.y - p2.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 125) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(192, 192, 192, ${0.14 * (1 - dist / 125)})`;
+              ctx.lineWidth = 0.7;
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.stroke();
             }
           }
 
-          animationFrameId = requestAnimationFrame(drawParticles);
+          // Subtle connection to cursor
+          if (mouse.x !== null && mouse.y !== null) {
+            const dxm = p.x - mouse.x;
+            const dym = p.y - mouse.y;
+            const distM = Math.sqrt(dxm * dxm + dym * dym);
+            if (distM < mouse.radius) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(229, 229, 229, ${0.24 * (1 - distM / mouse.radius)})`;
+              ctx.lineWidth = 0.85;
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+            }
+          }
         }
-
-        window.addEventListener("resize", () => {
-          cancelAnimationFrame(animationFrameId);
-          resizeCanvas();
-          drawParticles();
-        });
-
-        resizeCanvas();
-        drawParticles();
+        requestAnimationFrame(animateParticles);
       }
+
+      resizeCanvas();
+      animateParticles();
+    })();
+
+    // 7. Project Modal Data & Handlers
+    const projectData = [
+      {
+        tag: 'PROJECT // 01 — INSTITUTIONAL LOGISTICS',
+        title: 'Institutional Drone Delivery System',
+        description:
+          'A drone-based delivery management system engineered for large campuses such as colleges and hospitals. It streamlines internal logistics by managing and tracking automated aerial deliveries of important documents, files, and academic materials.',
+        highlights: [
+          'Predefined waypoint routing tailored for safe campus & hospital corridors.',
+          'Live telemetry and location monitoring powered by GPS and IoT sensors.',
+          'Centralized dispatch dashboard to log and verify document handoffs.'
+        ],
+        tech: ['IoT Sensors', 'GPS Navigation', 'Predefined Routing', 'Python', 'Web Dashboard']
+      },
+      {
+        tag: 'PROJECT // 02 — ACCESSIBILITY WEB APP',
+        title: 'Text to Sign Language Converter',
+        description:
+          'A web-based assistive application that translates typed text inputs into clear Indian Sign Language (ISL) visual representations, supporting smoother everyday communication for individuals with hearing and speech impairments.',
+        highlights: [
+          'Instant text parsing mapped to Indian Sign Language visual gestures.',
+          'Clean, distraction-free web interface built for fast comprehension.',
+          'Designed to promote inclusive communication in educational and public settings.'
+        ],
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'Indian Sign Language (ISL)', 'Accessibility']
+      },
+      {
+        tag: 'PROJECT // 03 — SPEECH-TO-SIGN SYSTEM',
+        title: 'Audio Speech to Sign Language Converter',
+        description:
+          'An interactive accessibility solution that captures spoken audio, transcribes speech into text, and converts the spoken content into sign language representations to bridge verbal and visual communication.',
+        highlights: [
+          'Real-time voice capture and speech-to-text conversion pipeline.',
+          'Automated mapping of recognized words into sequential sign representations.',
+          'Reduces communication barriers without requiring manual typing.'
+        ],
+        tech: ['Speech Recognition', 'Python', 'JavaScript', 'Assistive Technology', 'UI Design']
+      }
+    ];
+
+    const projectModal = document.getElementById('project-modal');
+    const modalTag = document.getElementById('modal-tag');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalHighlights = document.getElementById('modal-highlights');
+    const modalTech = document.getElementById('modal-tech');
+
+    function openProjectModal(index) {
+      const item = projectData[index];
+      if (!item) return;
+
+      modalTag.textContent = item.tag;
+      modalTitle.textContent = item.title;
+      modalDescription.textContent = item.description;
+
+      modalHighlights.innerHTML = item.highlights
+        .map(
+          (point) =>
+            `<li class="flex items-start gap-2.5"><i class="fa-solid fa-angle-right text-[#C0C0C0] mt-1 text-xs"></i><span>${point}</span></li>`
+        )
+        .join('');
+
+      modalTech.innerHTML = item.tech
+        .map(
+          (t) =>
+            `<span class="font-mono-tech text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-[#E5E5E5] border border-[#C0C0C0]/25">${t}</span>`
+        )
+        .join('');
+
+      projectModal.classList.remove('hidden');
+      projectModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      projectModal.classList.add('hidden');
+      projectModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) closeProjectModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !projectModal.classList.contains('hidden')) {
+        closeProjectModal();
+      }
+    });
+
+    // 8. Honest Contact Form Handler (Prepares Mailto Draft Without Faking Backend Delivery)
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('sender-name').value.trim();
+      const email = document.getElementById('sender-email').value.trim();
+      const subject = document.getElementById('sender-subject').value.trim();
+      const message = document.getElementById('sender-message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        formFeedback.className =
+          'rounded-xl p-3.5 text-xs border border-[#C0C0C0]/40 bg-white/5 text-[#E5E5E5] block';
+        formFeedback.innerHTML =
+          '<i class="fa-solid fa-circle-info mr-1.5 text-[#C0C0C0]"></i> Please fill in your Name, Email, Subject, and Message before sending.';
+        return;
+      }
+
+      const mailSubject = encodeURIComponent(`[Portfolio Contact] ${subject}`);
+      const mailBody = encodeURIComponent(
+        `Hello Hamdha,\n\n${message}\n\nBest regards,\n${name}\n(${email})`
+      );
+
+      formFeedback.className =
+        'rounded-xl p-3.5 text-xs border border-[#E5E5E5]/40 bg-white/10 text-[#F5F5F5] block';
+      formFeedback.innerHTML =
+        '<i class="fa-solid fa-envelope-open-text mr-1.5 text-[#E5E5E5]"></i> Opening your default email application with a pre-filled draft to <strong>hamdhafathima@gmail.com</strong>. If it does not open automatically, please click the email card on the left.';
+
+      window.location.href = `mailto:hamdhafathima@gmail.com?subject=${mailSubject}&body=${mailBody}`;
     });
   </script>
 </body>
